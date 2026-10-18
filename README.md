@@ -79,8 +79,8 @@
 
 | 시연 구분 | 영상 바로보기 | 주요 검증 내용 |
 | :--- | :--- | :--- |
-| **공공데이터 API 수집** | 📽️ [**API End-to-End 수집**](https://github.com/user-attachments/assets/b345c8a7-cd16-4115-8c8a-c8b18d2a45c9) | API 200 페이로드 검증, RAW 직접 적재 및 DQ Audit 실행 |
-| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](https://github.com/user-attachments/assets/47a238cb-ff08-4085-8ecc-5b4f55d1c0ce) | 보안 인증 자동 로그인 & 세션 유지, 동적 팝업 제어, 다중 분할 CSV 최신 날짜 선별 및 PostgreSQL COPY 적재 |
+| **공공데이터 API 수집** | 📽️ [**API End-to-End 수집**](https://github.com/user-attachments/assets/b345c8a7-cd16-4115-8c8a-c8b18d2a45c9) | API 페이로드 검증 ➔ PostgreSQL RAW 직접 적재 ➔ 정제 및 16개 DQ Audit 전수 검증 |
+| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](https://github.com/user-attachments/assets/47a238cb-ff08-4085-8ecc-5b4f55d1c0ce) | 보안 로그인 & 세션 유지 ➔ 동적 팝업 제어 ➔ 최신 날짜 CSV 선별 ➔ PostgreSQL COPY RAW 적재 ➔ 정제 및 16개 DQ Audit 전수 검증 |
 
 ---
 
