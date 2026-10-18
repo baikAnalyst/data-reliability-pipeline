@@ -80,7 +80,7 @@
 | 시연 구분 | 영상 바로보기 | 주요 검증 내용 |
 | :--- | :--- | :--- |
 | **공공데이터 API 수집** | 📽️ [**API End-to-End 수집**](https://github.com/user-attachments/assets/b345c8a7-cd16-4115-8c8a-c8b18d2a45c9) | API 200 페이로드 검증, RAW 직접 적재 및 DQ Audit 실행 |
-| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](https://github.com/user-attachments/assets/47a238cb-ff08-4085-8ecc-5b4f55d1c0ce) | 헤드리스 자동화, 다중 분할 CSV 최신 날짜 대조 선별 및 PostgreSQL COPY 벌크 적재 |
+| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](https://github.com/user-attachments/assets/47a238cb-ff08-4085-8ecc-5b4f55d1c0ce) | 브라우저 자동화(Headless 백그라운드 수집), 다중 분할 CSV 최신 날짜 대조 선별 및 PostgreSQL COPY 벌크 적재 |
 
 ---
 
