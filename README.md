@@ -278,6 +278,11 @@ APScheduler를 활용하여 데이터 소스의 갱신 주기에 맞춘 최적�
 
 단순한 에러 로그 적재에 그치지 않고, 운영 담당자가 인지해야 하는 **[파이프라인 실행 상태]**, **[데이터 품질(DQ) 상태]**, **[최대 병목 작업 소요 시간]** 및 **[고유 Run ID 기반 역추적성]**을 완전히 구조화하여 채널로 전달합니다.
 
+<p align="center">
+  <img src="docs/images/webhook_daily_digest.png" alt="Daily 2x Ops Digest" width="440">&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/images/webhook_incident_alert.png" alt="Real-time Incident Alert" width="440">
+</p>
+
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
 │ [정기 종합 브리핑] 📊 데이터 파이프라인 운영 현황                       │
