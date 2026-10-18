@@ -74,7 +74,7 @@ CSV 다운로드 시 PostgreSQL COPY
 RAW
 ```
 대용량 CSV 적재에는 PostgreSQL COPY를 사용하여 행 단위 INSERT 방식의 적재 부담을 줄였습니다.
-🎥 [Selenium 크롤링 시연 영상 보기](docs/videos/selenium_crawling_demo.mp4)
+https://github.com/baikAnalyst/data-reliability-pipeline/releases/download/v1.0.0/selenium_crawling_demo.mp4
 
 ---
 
