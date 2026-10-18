@@ -1,8 +1,11 @@
 # Environments and Secrets
 .env
+.env*
 *.env
 collector/.env
 *.secret
+*.backup
+*.bak
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
