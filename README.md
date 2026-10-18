@@ -21,7 +21,7 @@
 | **정제/가공 데이터 (PROCESSED)** | **4,009,597 건** | 좌표 검증(대한민국 영역), 결측 표준화, 자료형 정규화 완료 |
 | **설명 불가능한 유실 (Unexplained Loss)** | **0 건 (0.00%)** | **전체 78,468건의 정제 제외 데이터에 대해 100% 명확한 탈락 사유 소명 완료** |
 | **장애 사전 방어 사례** | **25,070 건 방어** | 잘못된 명세 변환으로 인한 대규모 NULL 변환 이슈 사전 탐지 및 원천 차단 |
-| **무중단 운영 자동화** | **일 2회 정기 브리핑** | 09:15(야간 배치 요약), 17:00(주간 운영 현황) Webhook 자동 발송 |
+| **무중단 운영 자동화** | **정기 브리핑 & 장애 알림** | 일일 운영 현황 요약 및 장애 발생 즉시 Webhook 자동 발송 |
 
 ---
 
@@ -270,20 +270,18 @@ APScheduler를 활용하여 데이터 소스의 갱신 주기에 맞춘 최적�
 | **`culture_bigdata`** | 체육시설·프로그램·교통 등 (8개) | 매월 1일 07:00 | 문화빅데이터 플랫폼 월간 대용량 크롤링 |
 
 - **실시간 장애 즉시 알림**: 파이프라인 FAILED 또는 DQ CHECK_FAILED 발생 시 상세 원인 및 Run ID를 포함한 Webhook 즉시 발송.
-- **정기 브리핑 (Daily 2x Ops Digest)**:
-  - **09:15**: 야간 배치 전수 집계 요약 및 시스템 헬스체크 (출근 직후 09:00 혼잡 및 알림 묻힘을 방지하고 데일리 스크럼에 맞춘 09:15 발송 최적화)
-  - **17:00**: 주간 수집 현황, 누적 처리량 및 지연/이상 징후 종합 보고 (퇴근 전 일간 데이터 인입 점검 및 야간 배치 인수인계)
+- **정기 브리핑 (Daily Ops Digest)**: 일간 수집 현황, 누적 처리량 및 지연/이상 징후를 정기 집계하여 Webhook 종합 보고.
 
 ### 6.1 실시간 운영 채널 연동 실측 (Live Webhook Architecture)
 
 단순한 에러 로그 적재에 그치지 않고, 운영 담당자가 인지해야 하는 **[파이프라인 실행 상태]**, **[데이터 품질(DQ) 상태]**, **[최대 병목 작업 소요 시간]** 및 **[고유 Run ID 기반 역추적성]**을 완전히 구조화하여 채널로 전달합니다.
 
-| 📊 정기 운영 종합 브리핑 (Daily 2x Ops Digest) | 🚨 실시간 장애 인시던트 격리 (Real-time Alert) |
+| 📊 정기 운영 종합 브리핑 (Daily Ops Digest) | 🚨 실시간 장애 인시던트 격리 (Real-time Alert) |
 | :---: | :---: |
-| <img src="docs/images/webhook_digest_clean.png" alt="Daily 2x Ops Digest" width="100%"> | <img src="docs/images/webhook_incident_clean.png" alt="Real-time Incident Alert" width="100%"> |
+| <img src="docs/images/webhook_digest_v3.png" alt="Daily Ops Digest" width="100%"> | <img src="docs/images/webhook_incident_v3.png" alt="Real-time Incident Alert" width="100%"> |
 
 #### 📋 운영 알림 3대 핵심 메커니즘
-1. **정기 종합 브리핑 (Daily 2x Ops Digest)**:
+1. **정기 종합 브리핑 (Daily Ops Digest)**:
    - 전체 실행(32건), 정상(26건), 실패(6건)의 파이프라인 프로세스 상태와 **데이터 품질 통과(26건) 상태를 완전히 독립 분리 집계**.
    - 파이프라인 전체 평균 소요 시간(11분 53초)과 **최대 병목 작업(`culture_bigdata` 1시간 55분 46초)**을 자동 산출하여 리소스 병목을 조기 식별.
    - 실패 작업(`air_quality`, `bicycle_accident`, `bus_stop`)을 명시하고 후속 조치 가이드라인(`원인 확인 후 재실행 여부 결정`)을 즉각 공유.
