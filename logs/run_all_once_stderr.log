@@ -1,0 +1,254 @@
+2026-09-29 14:08:17,132 | INFO | pipeline_scheduler | job=weather run_id=fe009477dbc74bb8b637f02721ea3730 status=START
+2026-09-29 14:08:17,147 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 14:08:19,638 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.491
+2026-09-29 14:08:19,641 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 14:08:19,918 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 14:08:19,938 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.020
+2026-09-29 14:08:19,939 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 14:08:20,080 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.141
+2026-09-29 14:08:20,081 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 14:08:20,277 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.196
+2026-09-29 14:08:20,278 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.357 stage_durations={"db": 0.19607189996168017, "process": 0.1412271000444889, "source_read": 0.01999709999654442}
+2026-09-29 14:08:20,278 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.637
+2026-09-29 14:08:20,301 | INFO | pipeline_scheduler | job=weather run_id=fe009477dbc74bb8b637f02721ea3730 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.148
+2026-09-29 14:08:20,303 | INFO | pipeline_scheduler | job=air_quality run_id=bb7631325b7a4c66a8895cc98d5903e1 status=START
+2026-09-29 14:08:20,304 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+2026-09-29 14:08:23,616 | INFO | pipeline_scheduler | job=air_quality stage=collect status=OK attempt=1/3 elapsed_seconds=3.312
+2026-09-29 14:08:23,617 | INFO | pipeline_scheduler | job=air_quality stage=load status=START
+2026-09-29 14:08:23,738 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=START
+2026-09-29 14:08:23,749 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=OK elapsed_seconds=0.012
+2026-09-29 14:08:23,750 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=START
+2026-09-29 14:08:24,013 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=OK elapsed_seconds=0.263
+2026-09-29 14:08:24,014 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=START
+2026-09-29 14:08:24,774 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=OK elapsed_seconds=0.759
+2026-09-29 14:08:24,789 | INFO | pipeline_elt | dataset=air_quality source=raw_database tables=air_quality status=SUCCESS elapsed_seconds=1.034 stage_durations={"db": 0.7593238999834284, "process": 0.26304959994740784, "source_read": 0.011809299932792783}
+2026-09-29 14:08:24,790 | INFO | pipeline_scheduler | job=air_quality stage=load status=OK elapsed_seconds=1.173
+2026-09-29 14:08:24,804 | INFO | pipeline_scheduler | job=air_quality run_id=bb7631325b7a4c66a8895cc98d5903e1 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=4.489
+2026-09-29 14:08:24,806 | INFO | pipeline_scheduler | job=weather_warning run_id=f6d4186e00ea4b648b694f24b59d87a4 status=START
+2026-09-29 14:08:24,806 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 14:08:27,872 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=3.066
+2026-09-29 14:08:27,880 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 14:08:28,044 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 14:08:28,057 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.013
+2026-09-29 14:08:28,059 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 14:08:28,338 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.278
+2026-09-29 14:08:28,353 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 14:08:28,506 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.154
+2026-09-29 14:08:28,508 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.446 stage_durations={"db": 0.15363640000578016, "process": 0.27847909997217357, "source_read": 0.013391399988904595}
+2026-09-29 14:08:28,510 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.630
+2026-09-29 14:08:28,530 | INFO | pipeline_scheduler | job=weather_warning run_id=f6d4186e00ea4b648b694f24b59d87a4 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.708
+2026-09-29 14:08:28,532 | INFO | pipeline_scheduler | job=durunubi run_id=894c45da111c46418fd6697f2efcf49a status=START
+2026-09-29 14:08:28,533 | INFO | pipeline_scheduler | job=durunubi stage=collect status=START attempt=1/3
+2026-09-29 14:08:33,647 | INFO | pipeline_scheduler | job=durunubi stage=collect status=OK attempt=1/3 elapsed_seconds=5.114
+2026-09-29 14:08:33,648 | INFO | pipeline_scheduler | job=durunubi stage=load status=START
+2026-09-29 14:08:33,853 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=source_read status=START
+2026-09-29 14:08:33,862 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 14:08:33,863 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=process status=START
+2026-09-29 14:08:34,060 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=process status=OK elapsed_seconds=0.198
+2026-09-29 14:08:34,061 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=db status=START
+2026-09-29 14:08:34,219 | INFO | pipeline_elt | dataset=durunubi source=raw_database stage=db status=OK elapsed_seconds=0.158
+2026-09-29 14:08:34,220 | INFO | pipeline_elt | dataset=durunubi source=raw_database tables=durunubi_trails,durunubi_segments status=SUCCESS elapsed_seconds=0.365 stage_durations={"db": 0.157925600069575, "process": 0.19774360000155866, "source_read": 0.009062499972060323}
+2026-09-29 14:08:34,221 | INFO | pipeline_scheduler | job=durunubi stage=load status=OK elapsed_seconds=0.573
+2026-09-29 14:08:34,239 | INFO | pipeline_scheduler | job=durunubi run_id=894c45da111c46418fd6697f2efcf49a status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=5.691
+2026-09-29 14:08:34,240 | INFO | pipeline_scheduler | job=facility run_id=dd31abe4417540e485ea621453fbdbae status=START
+2026-09-29 14:08:34,241 | INFO | pipeline_scheduler | job=facility stage=collect status=START attempt=1/3
+2026-09-29 14:15:35,464 | INFO | pipeline_scheduler | job=facility stage=collect status=OK attempt=1/3 elapsed_seconds=421.224
+2026-09-29 14:15:35,471 | INFO | pipeline_scheduler | job=facility stage=load status=START
+2026-09-29 14:15:35,569 | INFO | pipeline_elt | dataset=facility source=raw_database stage=source_read status=START
+2026-09-29 14:15:37,981 | INFO | pipeline_elt | dataset=facility source=raw_database stage=source_read status=OK elapsed_seconds=2.412
+2026-09-29 14:15:37,987 | INFO | pipeline_elt | dataset=facility source=raw_database stage=process status=START
+2026-09-29 14:16:09,597 | INFO | pipeline_elt | dataset=facility source=raw_database stage=process status=OK elapsed_seconds=31.610
+2026-09-29 14:16:09,612 | INFO | pipeline_elt | dataset=facility source=raw_database stage=db status=START
+2026-09-29 14:16:51,975 | INFO | pipeline_elt | dataset=facility source=raw_database stage=db status=OK elapsed_seconds=42.363
+2026-09-29 14:16:51,990 | INFO | pipeline_elt | dataset=facility source=raw_database tables=facility status=SUCCESS elapsed_seconds=76.385 stage_durations={"db": 42.36292380001396, "process": 31.61035970004741, "source_read": 2.411710500018671}
+2026-09-29 14:16:52,221 | INFO | pipeline_scheduler | job=facility stage=load status=OK elapsed_seconds=76.750
+2026-09-29 14:16:52,263 | INFO | pipeline_scheduler | job=facility run_id=dd31abe4417540e485ea621453fbdbae status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=497.997
+2026-09-29 14:16:52,273 | INFO | pipeline_scheduler | job=public_open_facility run_id=3e8818ef00144eb29f2a4f32de81aa26 status=START
+2026-09-29 14:16:52,274 | INFO | pipeline_scheduler | job=public_open_facility stage=collect status=START attempt=1/3
+2026-09-29 14:17:05,118 | INFO | pipeline_scheduler | job=public_open_facility stage=collect status=OK attempt=1/3 elapsed_seconds=12.844
+2026-09-29 14:17:05,132 | INFO | pipeline_scheduler | job=public_open_facility stage=load status=START
+2026-09-29 14:17:05,233 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=source_read status=START
+2026-09-29 14:17:05,310 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=source_read status=OK elapsed_seconds=0.077
+2026-09-29 14:17:05,311 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=process status=START
+2026-09-29 14:17:06,563 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=process status=OK elapsed_seconds=1.251
+2026-09-29 14:17:06,578 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=db status=START
+2026-09-29 14:17:12,810 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database stage=db status=OK elapsed_seconds=6.231
+2026-09-29 14:17:12,825 | INFO | pipeline_elt | dataset=public_open_facility source=raw_database tables=public_open_facility status=SUCCESS elapsed_seconds=7.560 stage_durations={"db": 6.231492099934258, "process": 1.2514365001115948, "source_read": 0.07712519995402545}
+2026-09-29 14:17:12,833 | INFO | pipeline_scheduler | job=public_open_facility stage=load status=OK elapsed_seconds=7.701
+2026-09-29 14:17:12,846 | INFO | pipeline_scheduler | job=public_open_facility run_id=3e8818ef00144eb29f2a4f32de81aa26 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=20.562
+2026-09-29 14:17:12,847 | INFO | pipeline_scheduler | job=aed run_id=607326e418a04baebb3389da53c17868 status=START
+2026-09-29 14:17:12,848 | INFO | pipeline_scheduler | job=aed stage=collect status=START attempt=1/3
+2026-09-29 14:19:48,661 | INFO | pipeline_scheduler | job=aed stage=collect status=OK attempt=1/3 elapsed_seconds=155.814
+2026-09-29 14:19:48,678 | INFO | pipeline_scheduler | job=aed stage=load status=START
+2026-09-29 14:19:48,809 | INFO | pipeline_elt | dataset=aed source=raw_database stage=source_read status=START
+2026-09-29 14:19:49,786 | INFO | pipeline_elt | dataset=aed source=raw_database stage=source_read status=OK elapsed_seconds=0.977
+2026-09-29 14:19:49,801 | INFO | pipeline_elt | dataset=aed source=raw_database stage=process status=START
+2026-09-29 14:20:07,924 | INFO | pipeline_elt | dataset=aed source=raw_database stage=process status=OK elapsed_seconds=18.123
+2026-09-29 14:20:07,939 | INFO | pipeline_elt | dataset=aed source=raw_database stage=db status=START
+2026-09-29 14:21:10,539 | INFO | pipeline_elt | dataset=aed source=raw_database stage=db status=OK elapsed_seconds=62.599
+2026-09-29 14:21:10,555 | INFO | pipeline_elt | dataset=aed source=raw_database tables=aed status=SUCCESS elapsed_seconds=81.699 stage_durations={"db": 62.59939789993223, "process": 18.122832800028846, "source_read": 0.976885600015521}
+2026-09-29 14:21:10,731 | INFO | pipeline_scheduler | job=aed stage=load status=OK elapsed_seconds=82.053
+2026-09-29 14:21:10,766 | INFO | pipeline_scheduler | job=aed run_id=607326e418a04baebb3389da53c17868 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=237.889
+2026-09-29 14:21:10,768 | INFO | pipeline_scheduler | job=bicycle_accident run_id=fb8bae6762dc442bbe81e9d2319bcadd status=START
+2026-09-29 14:21:10,769 | INFO | pipeline_scheduler | job=bicycle_accident stage=collect status=START attempt=1/2
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 969, in collect_all_scopes
+    preflight = request_page_with_retry(
+        session,
+        preflight_scope,
+        1,
+    )
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 562, in request_page_with_retry
+    return request_page_once(session, scope, page_no)
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 493, in request_page_once
+    raise GlobalServiceError(
+    ...<2 lines>...
+    )
+GlobalServiceError: data.go.kr 일일 서비스 요청 한도를 초과했습니다. HTTP 429: '{\n  "OpenAPI_ServiceResponse": {\n    "cmmMsgHeader": {\n      "errMsg": "LIMITED_NUMBER_OF_SERVICE_REQUESTS_EXCEEDS_ERROR",\n      "returnAuthMsg": "일일 서비스 요청제한 횟수 초과 에러",\n      "returnReasonCode": "22"\n    }\n  }\n}\n'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 1479, in <module>
+    main()
+    ~~~~^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 1458, in main
+    raw_df = collect_all_scopes(scopes, run_id)
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\bicycle_accident_api.py", line 992, in collect_all_scopes
+    raise PipelineError(
+    ...<5 lines>...
+    ) from exc
+PipelineError: 사전 API 점검에서 인증키 사용승인 또는 호출 한도 오류가 발생했습니다. 대량 수집을 시작하지 않습니다.
+다음 실행은 체크포인트부터 이어집니다: D:\BAIK\projects\team-share\data\raw\koroad_bicycle\koroad_bicycle_checkpoint.jsonl
+오류 기록: D:\BAIK\projects\team-share\data\raw\koroad_bicycle\koroad_bicycle_failures_20260929142113.csv
+2026-09-29 14:21:14,340 | ERROR | pipeline_scheduler | job=bicycle_accident stage=collect status=FAILED attempt=1/2 elapsed_seconds=3.571
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/bicycle_accident_api.py
+2026-09-29 14:21:14,346 | ERROR | pipeline_scheduler | job=bicycle_accident run_id=fb8bae6762dc442bbe81e9d2319bcadd stage=collect status=FAILED elapsed_seconds=3.578
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 291, in run_job
+    _collect_with_transient_retry(job_id, spec)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/bicycle_accident_api.py
+2026-09-29 14:21:15,508 | INFO | webhook_notifier | webhook provider=discord status=SENT http_status=204
+2026-09-29 14:21:15,526 | ERROR | pipeline_scheduler | job=bicycle_accident 최종 실패
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 697, in main
+    run_job(job_id, skip_db=args.skip_db)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 291, in run_job
+    _collect_with_transient_retry(job_id, spec)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/bicycle_accident_api.py
+2026-09-29 14:21:15,529 | INFO | pipeline_scheduler | job=culture_bigdata run_id=e936bb3958944c8c81c840513d70f350 status=START
+2026-09-29 14:21:15,529 | INFO | pipeline_scheduler | job=culture_bigdata stage=collect status=START attempt=1/2
+2026-09-29 14:21:16,225 INFO stage=run status=START mode=download products=6 download_dir=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255 log=D:\BAIK\projects\team-share\data\logs\bigdata_culture_selenium_20260929_142116.log
+2026-09-29 14:21:17,955 INFO stage=chrome_start status=OK headless=False
+2026-09-29 14:21:17,955 INFO stage=login status=START url=https://www.bigdata-culture.kr/bigdata/user/member/login.do
+2026-09-29 14:21:24,856 INFO stage=login status=OK
+2026-09-29 14:21:24,857 INFO stage=detail_page status=START product_id=615e7eb0-6e17-11ee-88b4-1384e6e2c3c9 url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=615e7eb0-6e17-11ee-88b4-1384e6e2c3c9
+2026-09-29 14:21:26,102 INFO stage=csv_selection status=OK product_id=615e7eb0-6e17-11ee-88b4-1384e6e2c3c9 file_id=b779595f-b634-4ab1-892a-4a6f0cef0d56 title='체육시설 인접 대중교통 정보(202607)'
+2026-09-29 14:21:26,406 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:21:39,037 INFO stage=download status=OK product_id=615e7eb0-6e17-11ee-88b4-1384e6e2c3c9 title='체육시설 인접 대중교통 정보(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_NEARBY_PBTRNSP_INFO_202607.csv bytes=488440254
+2026-09-29 14:21:39,043 INFO stage=detail_page status=START product_id=3b5399ad-88c4-43aa-a1d7-7ef6a630370b url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=3b5399ad-88c4-43aa-a1d7-7ef6a630370b
+2026-09-29 14:21:40,330 INFO stage=csv_selection status=OK product_id=3b5399ad-88c4-43aa-a1d7-7ef6a630370b file_id=f2c554bc-33be-4679-9a0d-488408d12808 title='전국체육시설현황 데이터(202607)'
+2026-09-29 14:21:40,551 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:21:42,931 INFO stage=download status=OK product_id=3b5399ad-88c4-43aa-a1d7-7ef6a630370b title='전국체육시설현황 데이터(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_WNTY_PHSTRN_FCLTY_STTUS_202607.csv bytes=81889812
+2026-09-29 14:21:42,950 INFO stage=detail_page status=START product_id=599b29a1-bb8d-41a5-8de5-400d2c8d2ba5 url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=599b29a1-bb8d-41a5-8de5-400d2c8d2ba5
+2026-09-29 14:21:44,649 INFO stage=csv_selection status=OK product_id=599b29a1-bb8d-41a5-8de5-400d2c8d2ba5 file_id=d30ec561-8dd3-4c44-87f6-c3d5e4c8a2d5 title='위치기반 체력측정 및 운동처방 정보(202607)'
+2026-09-29 14:21:44,826 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:21:59,337 INFO stage=download status=OK product_id=599b29a1-bb8d-41a5-8de5-400d2c8d2ba5 title='위치기반 체력측정 및 운동처방 정보(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_LC_IFRA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv bytes=916661039
+2026-09-29 14:21:59,347 INFO stage=detail_page status=START product_id=ddd74830-f977-11eb-8e60-2bcdc8456bfb url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=ddd74830-f977-11eb-8e60-2bcdc8456bfb
+2026-09-29 14:22:00,724 INFO stage=csv_selection status=OK product_id=ddd74830-f977-11eb-8e60-2bcdc8456bfb file_id=36462954-a238-41e4-86f5-1f383a8c1ebb title='개방학교 체육시설(202607)'
+2026-09-29 14:22:01,033 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:22:02,229 INFO stage=download status=OK product_id=ddd74830-f977-11eb-8e60-2bcdc8456bfb title='개방학교 체육시설(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_OPN_SCHUL_ALSFC_INFO_202607.csv bytes=424378
+2026-09-29 14:22:02,236 INFO stage=detail_page status=START product_id=1762f1c0-2594-11eb-af9a-4b03f0a582d6 url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=1762f1c0-2594-11eb-af9a-4b03f0a582d6
+2026-09-29 14:22:03,666 INFO stage=csv_selection status=OK product_id=1762f1c0-2594-11eb-af9a-4b03f0a582d6 file_id=2b2c0062-5c1d-4474-99c2-fcb39b9b8005 title='체육시설안전점검정보(202607)'
+2026-09-29 14:22:04,014 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:22:06,230 INFO stage=download status=OK product_id=1762f1c0-2594-11eb-af9a-4b03f0a582d6 title='체육시설안전점검정보(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_SAFECHK_INFO_202607.csv bytes=74070876
+2026-09-29 14:22:06,238 INFO stage=detail_page status=START product_id=2b1c565d-5f37-4152-966d-5f8094f8cf33 url=https://www.bigdata-culture.kr/bigdata/user/data_market/detail.do?id=2b1c565d-5f37-4152-966d-5f8094f8cf33
+2026-09-29 14:22:08,986 INFO stage=csv_selection status=OK product_id=2b1c565d-5f37-4152-966d-5f8094f8cf33 file_id=63ca955a-f0ce-451b-9e51-ae35feb19091 title='체력 측정별 운동처방 데이터(202607)'
+2026-09-29 14:22:09,259 INFO stage=consent_popup status=ACCEPTED purpose_code=004001003
+2026-09-29 14:22:10,445 INFO stage=download status=OK product_id=2b1c565d-5f37-4152-966d-5f8094f8cf33 title='체력 측정별 운동처방 데이터(202607)' file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_NFA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv bytes=7526550
+2026-09-29 14:22:10,468 INFO stage=download_pipeline status=OK downloaded=6
+2026-09-29 14:22:13,416 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_NEARBY_PBTRNSP_INFO_202607.csv
+2026-09-29 14:22:31,173 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_NEARBY_PBTRNSP_INFO_202607.csv encoding=utf-8-sig columns=17 rows=1639279 null_fields=1967775
+2026-09-29 14:22:31,174 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_WNTY_PHSTRN_FCLTY_STTUS_202607.csv
+2026-09-29 14:22:34,661 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_WNTY_PHSTRN_FCLTY_STTUS_202607.csv encoding=utf-8-sig columns=58 rows=152968 null_fields=3380415
+2026-09-29 14:22:34,662 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_LC_IFRA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:23:21,449 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_LC_IFRA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv encoding=utf-8-sig columns=69 rows=1389228 null_fields=41225660
+2026-09-29 14:23:21,450 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_OPN_SCHUL_ALSFC_INFO_202607.csv
+2026-09-29 14:23:21,483 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_OPN_SCHUL_ALSFC_INFO_202607.csv encoding=utf-8-sig columns=13 rows=1206 null_fields=55
+2026-09-29 14:23:21,484 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_SAFECHK_INFO_202607.csv
+2026-09-29 14:23:24,985 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_SAFECHK_INFO_202607.csv encoding=utf-8-sig columns=30 rows=192314 null_fields=924481
+2026-09-29 14:23:24,986 INFO stage=csv_validation status=START file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_NFA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:23:25,225 INFO stage=csv_validation status=OK file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_NFA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv encoding=utf-8-sig columns=10 rows=25070 null_fields=0
+2026-09-29 14:23:25,413 INFO stage=db_load status=START target=raw.culture_sports_facility_nearby_public_transport csv_rows=1639279 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_NEARBY_PBTRNSP_INFO_202607.csv
+2026-09-29 14:23:53,946 INFO stage=db_load status=START target=raw.culture_national_sports_facility_status csv_rows=152968 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_WNTY_PHSTRN_FCLTY_STTUS_202607.csv
+2026-09-29 14:23:59,909 INFO stage=db_load status=START target=raw.culture_location_fitness_measurement_prescriptions csv_rows=1389228 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_LC_IFRA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:25:02,672 INFO stage=db_load status=START target=raw.culture_open_school_sports_facilities csv_rows=1206 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_OPN_SCHUL_ALSFC_INFO_202607.csv
+2026-09-29 14:25:02,720 INFO stage=db_load status=START target=raw.culture_sports_facility_safety_inspections csv_rows=192314 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_SAFECHK_INFO_202607.csv
+2026-09-29 14:25:07,608 INFO stage=db_load status=START target=raw.culture_fitness_measurement_prescriptions csv_rows=25070 file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_NFA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:25:11,615 INFO stage=db_row_count_validation status=OK target=raw.culture_sports_facility_nearby_public_transport csv_rows=1639279 db_rows=1639279
+2026-09-29 14:25:11,615 INFO stage=db_row_count_validation status=OK target=raw.culture_national_sports_facility_status csv_rows=152968 db_rows=152968
+2026-09-29 14:25:11,615 INFO stage=db_row_count_validation status=OK target=raw.culture_location_fitness_measurement_prescriptions csv_rows=1389228 db_rows=1389228
+2026-09-29 14:25:11,616 INFO stage=db_row_count_validation status=OK target=raw.culture_open_school_sports_facilities csv_rows=1206 db_rows=1206
+2026-09-29 14:25:11,616 INFO stage=db_row_count_validation status=OK target=raw.culture_sports_facility_safety_inspections csv_rows=192314 db_rows=192314
+2026-09-29 14:25:11,616 INFO stage=db_row_count_validation status=OK target=raw.culture_fitness_measurement_prescriptions csv_rows=25070 db_rows=25070
+2026-09-29 14:25:11,634 INFO stage=download_manifest status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\culture_manifest_c1c143c5b4e74ba0.json
+2026-09-29 14:25:11,644 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_NEARBY_PBTRNSP_INFO_202607.csv
+2026-09-29 14:25:11,657 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_WNTY_PHSTRN_FCLTY_STTUS_202607.csv
+2026-09-29 14:25:11,953 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_LC_IFRA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:25:11,956 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_OPN_SCHUL_ALSFC_INFO_202607.csv
+2026-09-29 14:25:11,978 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_ALSFC_SAFECHK_INFO_202607.csv
+2026-09-29 14:25:11,981 INFO stage=download_cleanup status=DELETED file=D:\BAIK\projects\team-share\data\raw\culture_bigdata\20260929_142116_195255\KS_NFA_FTNESS_MESURE_MVM_PRSCRPTN_INFO_202607.csv
+2026-09-29 14:25:11,982 INFO stage=run status=OK downloaded=6 raw_loaded_tables=6
+2026-09-29 14:25:12,208 | INFO | pipeline_scheduler | job=culture_bigdata stage=collect status=OK attempt=1/2 elapsed_seconds=236.679
+2026-09-29 14:25:12,209 | INFO | pipeline_scheduler | job=culture_bigdata stage=load status=START
+2026-09-29 14:25:12,390 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=source_read status=START
+2026-09-29 14:27:12,794 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=source_read status=OK elapsed_seconds=120.403
+2026-09-29 14:27:12,815 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=process status=START
+2026-09-29 14:59:57,781 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=process status=OK elapsed_seconds=1964.967
+2026-09-29 14:59:57,798 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=db status=START
+2026-09-29 16:14:49,213 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database stage=db status=OK elapsed_seconds=4491.417
+2026-09-29 16:14:49,228 | INFO | pipeline_elt | dataset=culture_bigdata source=raw_database tables=culture_public_sports_facilities,culture_public_sports_facility_programs,culture_sports_facility_nearby_public_transport,culture_national_sports_facility_status,culture_location_fitness_measurement_prescriptions,culture_open_school_sports_facilities,culture_sports_facility_safety_inspections,culture_fitness_measurement_prescriptions status=SUCCESS elapsed_seconds=6576.787 stage_durations={"db": 4491.416593399947, "process": 1964.9669449999928, "source_read": 120.40321220003534}
+2026-09-29 16:15:10,603 | INFO | pipeline_scheduler | job=culture_bigdata stage=load status=OK elapsed_seconds=6598.397
+2026-09-29 16:15:10,675 | INFO | pipeline_scheduler | job=culture_bigdata run_id=e936bb3958944c8c81c840513d70f350 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=6835.101
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 718, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 705, in main
+    raise RuntimeError(message)
+RuntimeError: 실패 작업: bicycle_accident
+9, "process": 1216.4070120999822, "source_read": 69.55636899999809}
+2026-09-29 15:32:02,303 | INFO | pipeline_scheduler | job=culture_bigdata stage=load status=OK elapsed_seconds=6794.759
+2026-09-29 15:32:02,438 | INFO | pipeline_scheduler | job=culture_bigdata run_id=395b02359a2c4be0bf42126b242a8b63 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=6946.271
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 718, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 705, in main
+    raise RuntimeError(message)
+RuntimeError: 실패 작업: air_quality, bicycle_accident
