@@ -280,7 +280,7 @@ APScheduler를 활용하여 데이터 소스의 갱신 주기에 맞춘 최적�
 
 | 📊 정기 운영 종합 브리핑 (Daily 2x Ops Digest) | 🚨 실시간 장애 인시던트 격리 (Real-time Alert) |
 | :---: | :---: |
-| <img src="docs/images/webhook_daily_digest.png" alt="Daily 2x Ops Digest" width="100%"> | <img src="docs/images/webhook_incident_alert.png" alt="Real-time Incident Alert" width="100%"> |
+| <img src="docs/images/webhook_digest_clean.png" alt="Daily 2x Ops Digest" width="100%"> | <img src="docs/images/webhook_incident_clean.png" alt="Real-time Incident Alert" width="100%"> |
 
 #### 📋 운영 알림 3대 핵심 메커니즘
 1. **정기 종합 브리핑 (Daily 2x Ops Digest)**:
