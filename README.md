@@ -79,8 +79,8 @@
 
 | 시연 구분 | 영상 바로보기 (GitHub Player) | 주요 검증 내용 |
 | :--- | :--- | :--- |
-| **공공데이터 API 수집** | 📽️ [**API End-to-End 수집**](https://github.com/2nd-MLOps-engineer/team-share/blob/main/M3_data_pipeline/docs/videos/api_run_all_once.mp4) | API 200 페이로드 검증, RAW 직접 적재 및 DQ Audit 실행 |
-| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](https://github.com/2nd-MLOps-engineer/team-share/blob/main/M3_data_pipeline/docs/videos/selenium_crawling_demo.mp4) | 헤드리스 브라우저 다운로드 자동화 및 PostgreSQL COPY 벌크 적재 |
+| **공공데이터 API 수집** | 📽️ [**API End-to-End 수집 시연 영상 보기 (api_run_all_once.mp4)**](https://github.com/2nd-MLOps-engineer/team-share/blob/main/M3_data_pipeline/docs/videos/api_run_all_once.mp4) | API 200 페이로드 검증, RAW 직접 적재 및 DQ Audit 실행 |
+| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재 시연 영상 보기 (selenium_crawling_demo.mp4)**](https://github.com/2nd-MLOps-engineer/team-share/blob/main/M3_data_pipeline/docs/videos/selenium_crawling_demo.mp4) | 헤드리스 브라우저 다운로드 자동화 및 PostgreSQL COPY 벌크 적재 |
 
 ---
 
