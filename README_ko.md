@@ -12,8 +12,8 @@
 [![Unexplained Loss](https://img.shields.io/badge/Unexplained_Loss-0_Rows-brightgreen.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
 
 > **"If data cannot be audited, it is not reliable."**  
-> 대규모 공공/문화 빅데이터(408만+ 건)를 대상으로 **수집 장애 격리, 체크포인트 복구, 16개 DQ 감사 규칙, 행 단위 대조(Reconciliation) 및 일 2회 자동 운영 보고**를 수행하는 프로덕션 레벨 데이터 신뢰성 엔지니어링(DRE) 파이프라인입니다.  
-> *2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 출품작 (서비스 개발 부문).*
+> 🏆 **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 출품작 (서비스 개발 부문)**  
+> 👤 **Data Engineering & Pipeline Lead**: **백선영 ([@baikAnalyst](https://github.com/baikAnalyst))**
 
 ---
 

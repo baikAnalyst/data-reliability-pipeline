@@ -12,8 +12,8 @@
 [![Unexplained Loss](https://img.shields.io/badge/Unexplained_Loss-0_Rows-brightgreen.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
 
 > **"If data cannot be audited, it is not reliable."**  
-> An enterprise-grade Data Reliability Engineering (DRE) pipeline handling large-scale public and culture big data (**4.08M+ records**) featuring **fault-isolated ingestion, checkpoint-based recovery, 16-rule DQ auditing, row-level reconciliation, and automated bi-daily operational reporting**.  
-> *Engineered for the 2026 KSPO Public Big Data Utilization Competition (Service Development Track).*
+> 🏆 **2026 KSPO Public Big Data Utilization Competition (Service Development Track)**  
+> 👤 **Data Engineering Lead**: **Sonia Baik ([@baikAnalyst](https://github.com/baikAnalyst))**
 
 ---
 
