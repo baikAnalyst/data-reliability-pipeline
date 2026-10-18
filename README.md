@@ -269,10 +269,28 @@ APScheduler를 활용하여 데이터 소스의 갱신 주기에 맞춘 최적�
 | **`aed`** | AED 자동심장충격기 설치정보 (1개) | 매월 1일 06:00 | 월간 AED 설치 위치 갱신 |
 | **`culture_bigdata`** | 체육시설·프로그램·교통 등 (8개) | 매월 1일 07:00 | 문화빅데이터 플랫폼 월간 대용량 크롤링 |
 
-- **장애 즉시 알림**: 파이프라인 FAILED 또는 DQ CHECK_FAILED 발생 시 상세 원인 Webhook 즉시 발송.
+- **실시간 장애 즉시 알림**: 파이프라인 FAILED 또는 DQ CHECK_FAILED 발생 시 상세 원인 및 Run ID를 포함한 Webhook 즉시 발송.
 - **정기 브리핑 (Daily 2x Ops Digest)**:
-  - **09:15**: 야간 배치 실행 요약 및 시스템 헬스체크 보고
-  - **17:00**: 일간 수집 현황, 누적 처리량 및 이상 징후 종합 보고
+  - **09:15**: 야간 배치 전수 집계 요약 및 시스템 헬스체크 보고
+  - **17:00**: 주간 수집 현황, 누적 처리량 및 지연/이상 징후 종합 보고
+
+### 6.1 실시간 운영 채널 연동 실측 (Live Webhook Notifications)
+
+단순한 에러 로그 적재에 그치지 않고, 운영 담당자가 인지해야 하는 **[파이프라인 실행 상태]**, **[데이터 품질(DQ) 상태]**, **[최대 병목 작업 소요 시간]** 및 **[고유 Run ID 기반 역추적성]**을 완전히 구조화하여 전달합니다.
+
+<p align="center">
+  <img src="docs/images/webhook_daily_digest.png" alt="Daily 2x Ops Digest" width="440">&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/images/webhook_incident_alert.png" alt="Real-time Incident Alert" width="440">
+</p>
+
+#### 📋 운영 알림 2대 핵심 메커니즘
+1. **정기 종합 브리핑 (Daily 2x Ops Digest)**:
+   - 전체 실행(32건), 정상(26건), 실패(6건)의 파이프라인 프로세스 상태와 **데이터 품질 통과(26건) 상태를 완전히 독립 분리 집계**.
+   - 파이프라인 전체 평균 소요 시간(11분 53초)과 **최대 병목 작업(`culture_bigdata` 1시간 55분 46초)**을 자동 산출하여 리소스 병목을 조기 식별.
+   - 실패 작업(`air_quality`, `bicycle_accident`, `bus_stop`)을 명시하고 후속 조치 가이드라인(`원인 확인 후 재실행 여부 결정`)을 즉각 공유.
+2. **실시간 장애 인시던트 격리 (Real-time Incident Alert)**:
+   - 특정 파이프라인 수집 실패 시 1초 만에 즉시 알림 발송.
+   - 단속적인 실패 텍스트가 아닌, 실패 단계(`데이터 수집`), 소요 시간(1분 40초), 그리고 **개별 실행을 고유 식별하는 `Run ID`(`981a0c3effff4a...`)를 제공**하여 운영자가 `pipeline/error` 로그를 즉시 역추적 가능.
 
 ---
 
