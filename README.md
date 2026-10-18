@@ -276,9 +276,24 @@ APScheduler를 활용하여 데이터 소스의 갱신 주기에 맞춘 최적�
 
 단순한 에러 로그 적재에 그치지 않고, 운영 담당자가 인지해야 하는 **[파이프라인 실행 상태]**, **[데이터 품질(DQ) 상태]**, **[최대 병목 작업 소요 시간]** 및 **[고유 Run ID 기반 역추적성]**을 완전히 구조화하여 채널로 전달합니다.
 
-| 📊 정기 운영 종합 브리핑 (Daily Ops Digest) | 🚨 실시간 장애 인시던트 격리 (Real-time Alert) |
-| :---: | :---: |
-| <img src="docs/images/webhook_digest_v3.png" alt="Daily Ops Digest" width="100%"> | <img src="docs/images/webhook_incident_v3.png" alt="Real-time Incident Alert" width="100%"> |
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="50%">📊 정기 운영 종합 브리핑 (Daily Ops Digest)</th>
+      <th align="center" width="50%">🚨 실시간 장애 인시던트 격리 (Real-time Alert)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <img src="docs/images/webhook_digest_v4.png" alt="Daily Ops Digest" width="100%">
+      </td>
+      <td valign="top">
+        <img src="docs/images/webhook_incident_v4.png" alt="Real-time Incident Alert" width="100%">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 #### 📋 운영 알림 3대 핵심 메커니즘
 1. **정기 종합 브리핑 (Daily Ops Digest)**:
