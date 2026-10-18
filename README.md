@@ -36,14 +36,20 @@ To guarantee uncompromising data integrity, the pipeline maintains strict logica
 
 ```text
  [Public Big Data APIs (11 Datasets)]          [Culture Big Data Platform (8 Datasets)]
-               │                                                  │
-          (Collector)                                    (Selenium Headless)
-               │                                                  │
-     Payload/Format Validation                          Streaming CSV Processing
-               │                                                  │
-               └────────────────────────┬─────────────────────────┘
-                                        │
-                                        ▼ (PostgreSQL COPY & Staging Bulk Load)
+               │                                            │
+      (Open API Collector)                         (Selenium Headless)
+               │                                            │
+     Fake 200 Detection · Backoff Retry           Session/Popup Control · CSV Stream
+   Reconciliation & JSONL Checkpoint Recovery                   │
+               │                                            │
+ [JSON/XML Parsing ➔ Staging Ingest]           [PostgreSQL COPY ➔ Staging Ingest]
+               │                                            │
+               └─────────────────────┬──────────────────────┘
+                                     │
+                    (Atomic Staging Validation ➔ RAW Schema)
+                                     │
+                                     ▼
+
  ┌────────────────────────────────────────────────────────────────────────────┐
  │                               PostgreSQL DB                                │
  │                                                                            │
