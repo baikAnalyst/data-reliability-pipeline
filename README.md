@@ -1,4 +1,4 @@
-**[ 🌐 English ]** | [ 🇰🇷 한국어 (Korean) ](README_ko.md)
+﻿**[ 🌐 English ]** | [ 🇰🇷 한국어 (Korean) ](README_ko.md)
 
 ---
 
@@ -39,11 +39,11 @@ To guarantee uncompromising data integrity, the pipeline maintains strict logica
                │                                                  │
           (Collector)                                    (Selenium Headless)
                │                                                  │
-     Payload/Format Validation                          Streaming In-Memory Buffers
+     Payload/Format Validation                          Streaming CSV Processing
                │                                                  │
                └────────────────────────┬─────────────────────────┘
                                         │
-                                        ▼ (In-Memory Buffer / COPY Bulk Load)
+                                        ▼ (PostgreSQL COPY & Staging Bulk Load)
  ┌────────────────────────────────────────────────────────────────────────────┐
  │                               PostgreSQL DB                                │
  │                                                                            │
@@ -321,3 +321,4 @@ Rather than drowning engineers in unformatted terminal dumps, the pipeline forma
 
 This project was built for production data reliability engineering and submitted to the **2026 KSPO Public Big Data Utilization Competition**.  
 All rights reserved.
+
