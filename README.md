@@ -75,6 +75,13 @@
 - **중간 파일 의존성 제거**: 기존 `API → CSV → DB`의 비효율성을 제거하고 메모리 버퍼에서 `raw` 스키마로 직접 스트리밍 적재.
 - **PostgreSQL `COPY` 기반 초고속 대용량 적재**: 수십만 건의 문화빅데이터 적재 시 행 단위 `INSERT` 대신 PostgreSQL 바이너리 스트리밍 `COPY` 명령어를 사용하여 적재 병목 90% 이상 해소.
 
+#### 🎥 파이프라인 구동 & 크롤링 시연 영상 (Live Demos)
+
+| 시연 구분 | 영상 바로보기 | 주요 검증 내용 |
+| :--- | :--- | :--- |
+| **공공데이터 API 수집** | 📽️ [**API End-to-End 수집**](docs/videos/api_run_all_once.mp4) | API 200 페이로드 검증, RAW 직접 적재 및 DQ Audit 실행 |
+| **문화빅데이터 크롤링** | 📽️ [**Selenium 크롤링 & COPY 적재**](docs/videos/selenium_crawling_demo.mp4) | 헤드리스 브라우저 다운로드 자동화 및 PostgreSQL COPY 벌크 적재 |
+
 
 ---
 
