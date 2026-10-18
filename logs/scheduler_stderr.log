@@ -1,0 +1,694 @@
+2026-09-29 16:46:56,157 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,158 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,162 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,163 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,163 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,164 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,165 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,165 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,165 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,166 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,166 | INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-09-29 16:46:56,166 | INFO | pipeline_scheduler | scheduler status=START jobs=9 timezone=Asia/Seoul
+2026-09-29 16:46:56,166 | INFO | apscheduler.scheduler | Added job "weather: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,167 | INFO | apscheduler.scheduler | Added job "air_quality: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,167 | INFO | apscheduler.scheduler | Added job "weather_warning: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,167 | INFO | apscheduler.scheduler | Added job "durunubi: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,167 | INFO | apscheduler.scheduler | Added job "facility: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,168 | INFO | apscheduler.scheduler | Added job "public_open_facility: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,168 | INFO | apscheduler.scheduler | Added job "aed: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,168 | INFO | apscheduler.scheduler | Added job "bicycle_accident: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,168 | INFO | apscheduler.scheduler | Added job "culture_bigdata: collect -> process -> database" to job store "default"
+2026-09-29 16:46:56,168 | INFO | apscheduler.scheduler | Added job "09:15 pipeline operations summary" to job store "default"
+2026-09-29 16:46:56,169 | INFO | apscheduler.scheduler | Added job "17:00 pipeline operations summary" to job store "default"
+2026-09-29 16:46:56,169 | INFO | apscheduler.scheduler | Scheduler started
+2026-09-29 16:50:00,011 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 16:50:00 Asia/Seoul)" (scheduled at 2026-09-29 16:50:00+09:00)
+2026-09-29 16:50:00,027 | INFO | pipeline_scheduler | job=weather_warning run_id=b704c98a84994ea99932f37c3422e7e2 status=START
+2026-09-29 16:50:00,027 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 16:50:02,163 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.136
+2026-09-29 16:50:02,164 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 16:50:02,411 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 16:50:02,438 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.027
+2026-09-29 16:50:02,439 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 16:50:02,558 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.119
+2026-09-29 16:50:02,559 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 16:50:02,610 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.051
+2026-09-29 16:50:02,611 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.198 stage_durations={"db": 0.05134949996136129, "process": 0.11910429992713034, "source_read": 0.02727469999808818}
+2026-09-29 16:50:02,612 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.447
+2026-09-29 16:50:02,628 | INFO | pipeline_scheduler | job=weather_warning run_id=b704c98a84994ea99932f37c3422e7e2 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.586
+2026-09-29 16:50:02,629 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:00:00 Asia/Seoul)" executed successfully
+2026-09-29 17:00:00,016 | INFO | apscheduler.executors.default | Running job "17:00 pipeline operations summary (trigger: cron[hour='17', minute='0'], next run at: 2026-09-30 17:00:00 Asia/Seoul)" (scheduled at 2026-09-29 17:00:00+09:00)
+2026-09-29 17:00:00,017 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:10:00 Asia/Seoul)" (scheduled at 2026-09-29 17:00:00+09:00)
+2026-09-29 17:00:00,033 | INFO | pipeline_scheduler | job=weather_warning run_id=a41fd19e6c1b43d3964d98409f926d45 status=START
+2026-09-29 17:00:00,037 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:00:01,592 | INFO | webhook_notifier | webhook provider=discord status=SENT http_status=204
+2026-09-29 17:00:01,608 | INFO | pipeline_scheduler | operations_summary status=COMPLETE period_start=2026-09-29T09:15:00+09:00 period_end=2026-09-29T17:00:00+09:00 total_runs=32
+2026-09-29 17:00:01,609 | INFO | apscheduler.executors.default | Job "17:00 pipeline operations summary (trigger: cron[hour='17', minute='0'], next run at: 2026-09-30 17:00:00 Asia/Seoul)" executed successfully
+2026-09-29 17:00:01,957 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=1.920
+2026-09-29 17:00:01,958 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:00:02,141 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:00:02,147 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.006
+2026-09-29 17:00:02,147 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:00:02,257 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.110
+2026-09-29 17:00:02,259 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:00:02,320 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.062
+2026-09-29 17:00:02,322 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.178 stage_durations={"db": 0.06156230007763952, "process": 0.11006969993468374, "source_read": 0.0060909000458195806}
+2026-09-29 17:00:02,322 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.364
+2026-09-29 17:00:02,335 | INFO | pipeline_scheduler | job=weather_warning run_id=a41fd19e6c1b43d3964d98409f926d45 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.291
+2026-09-29 17:00:02,336 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:10:00 Asia/Seoul)" executed successfully
+2026-09-29 17:10:00,008 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 17:40:00 Asia/Seoul)" (scheduled at 2026-09-29 17:10:00+09:00)
+2026-09-29 17:10:00,008 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:20:00 Asia/Seoul)" (scheduled at 2026-09-29 17:10:00+09:00)
+2026-09-29 17:10:00,023 | INFO | pipeline_scheduler | job=weather run_id=f423cfeda0974277b70549b679651b34 status=START
+2026-09-29 17:10:00,023 | INFO | pipeline_scheduler | job=weather_warning run_id=5f48cb6cc47444fea514f654125e81b5 status=START
+2026-09-29 17:10:00,024 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 17:10:00,024 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:10:02,307 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.283
+2026-09-29 17:10:02,308 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 17:10:02,313 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.289
+2026-09-29 17:10:02,314 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:10:02,417 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 17:10:02,420 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:10:02,428 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.010
+2026-09-29 17:10:02,428 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.008
+2026-09-29 17:10:02,429 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 17:10:02,429 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:10:02,716 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.287
+2026-09-29 17:10:02,717 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:10:02,736 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.307
+2026-09-29 17:10:02,736 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 17:10:02,813 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.096
+2026-09-29 17:10:02,816 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.391 stage_durations={"db": 0.09605599998030812, "process": 0.2872264999896288, "source_read": 0.007612999994307756}
+2026-09-29 17:10:02,816 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.503
+2026-09-29 17:10:02,880 | INFO | pipeline_scheduler | job=weather_warning run_id=5f48cb6cc47444fea514f654125e81b5 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.794
+2026-09-29 17:10:02,881 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:20:00 Asia/Seoul)" executed successfully
+2026-09-29 17:10:02,912 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.176
+2026-09-29 17:10:02,912 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.493 stage_durations={"db": 0.17552609997801483, "process": 0.30703160003758967, "source_read": 0.010496099945157766}
+2026-09-29 17:10:02,913 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.606
+2026-09-29 17:10:02,925 | INFO | pipeline_scheduler | job=weather run_id=f423cfeda0974277b70549b679651b34 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.892
+2026-09-29 17:10:02,926 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 17:40:00 Asia/Seoul)" executed successfully
+2026-09-29 17:15:00,009 | INFO | apscheduler.executors.default | Running job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 18:15:00 Asia/Seoul)" (scheduled at 2026-09-29 17:15:00+09:00)
+2026-09-29 17:15:00,023 | INFO | pipeline_scheduler | job=air_quality run_id=981a0c3effff4a13883d0f37281eda4b status=START
+2026-09-29 17:15:00,024 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\air_quality.py", line 564, in <module>
+    ) = collect_all_sidos()
+        ~~~~~~~~~~~~~~~~~^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\collector\air_quality.py", line 490, in collect_all_sidos
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: 재시도 후에도 수집하지 못한 시도가 있습니다: 대전
+2026-09-29 17:16:40,335 | ERROR | pipeline_scheduler | job=air_quality stage=collect status=FAILED attempt=1/3 elapsed_seconds=100.311
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/air_quality.py
+2026-09-29 17:16:40,339 | ERROR | pipeline_scheduler | job=air_quality run_id=981a0c3effff4a13883d0f37281eda4b stage=collect status=FAILED elapsed_seconds=100.316
+Traceback (most recent call last):
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 291, in run_job
+    _collect_with_transient_retry(job_id, spec)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/air_quality.py
+2026-09-29 17:16:41,232 | INFO | webhook_notifier | webhook provider=discord status=SENT http_status=204
+2026-09-29 17:16:41,249 | ERROR | apscheduler.executors.default | Job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 18:15:00 Asia/Seoul)" raised an exception
+Traceback (most recent call last):
+  File "C:\Users\Baik\AppData\Roaming\Python\Python313\site-packages\apscheduler\executors\base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 291, in run_job
+    _collect_with_transient_retry(job_id, spec)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 206, in _collect_with_transient_retry
+    _run_script(spec)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\BAIK\projects\team-share\M3_data_pipeline\pipeline_scheduler.py", line 184, in _run_script
+    raise error_type(
+        f"collector exited with code {result.returncode}: {spec.collector_script}"
+    )
+CollectionStageError: collector exited with code 1: collector/air_quality.py
+2026-09-29 17:20:00,003 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:30:00 Asia/Seoul)" (scheduled at 2026-09-29 17:20:00+09:00)
+2026-09-29 17:20:00,018 | INFO | pipeline_scheduler | job=weather_warning run_id=f21e540df5584c81aca2650bbacc3dfa status=START
+2026-09-29 17:20:00,018 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:20:02,496 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.477
+2026-09-29 17:20:02,497 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:20:02,690 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:20:02,697 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 17:20:02,698 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:20:02,820 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.122
+2026-09-29 17:20:02,821 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:20:02,899 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.078
+2026-09-29 17:20:02,900 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.207 stage_durations={"db": 0.07783590001054108, "process": 0.12208270002156496, "source_read": 0.007236100034788251}
+2026-09-29 17:20:02,901 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.405
+2026-09-29 17:20:02,919 | INFO | pipeline_scheduler | job=weather_warning run_id=f21e540df5584c81aca2650bbacc3dfa status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.885
+2026-09-29 17:20:02,920 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:30:00 Asia/Seoul)" executed successfully
+2026-09-29 17:30:00,012 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:40:00 Asia/Seoul)" (scheduled at 2026-09-29 17:30:00+09:00)
+2026-09-29 17:30:00,027 | INFO | pipeline_scheduler | job=weather_warning run_id=b1ffe8e9e395410cbcc7d659f632f681 status=START
+2026-09-29 17:30:00,028 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:30:02,187 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.160
+2026-09-29 17:30:02,189 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:30:02,270 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:30:02,276 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 17:30:02,277 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:30:02,406 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.129
+2026-09-29 17:30:02,407 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:30:02,468 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.061
+2026-09-29 17:30:02,469 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.197 stage_durations={"db": 0.06136950000654906, "process": 0.12891069997567683, "source_read": 0.006860099965706468}
+2026-09-29 17:30:02,470 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.281
+2026-09-29 17:30:02,477 | INFO | pipeline_scheduler | job=weather_warning run_id=b1ffe8e9e395410cbcc7d659f632f681 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.444
+2026-09-29 17:30:02,477 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:40:00 Asia/Seoul)" executed successfully
+2026-09-29 17:40:00,010 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 18:10:00 Asia/Seoul)" (scheduled at 2026-09-29 17:40:00+09:00)
+2026-09-29 17:40:00,010 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:50:00 Asia/Seoul)" (scheduled at 2026-09-29 17:40:00+09:00)
+2026-09-29 17:40:00,025 | INFO | pipeline_scheduler | job=weather run_id=a0a896377b3c49c4b6456aaa98650893 status=START
+2026-09-29 17:40:00,026 | INFO | pipeline_scheduler | job=weather_warning run_id=21cdd8d2d0c2401fa4955473afd3a850 status=START
+2026-09-29 17:40:00,027 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 17:40:00,027 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:40:04,685 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=4.658
+2026-09-29 17:40:04,686 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:40:04,839 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=4.812
+2026-09-29 17:40:04,840 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 17:40:04,856 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:40:04,868 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.012
+2026-09-29 17:40:04,869 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:40:05,124 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.255
+2026-09-29 17:40:05,136 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 17:40:05,140 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:40:05,160 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.024
+2026-09-29 17:40:05,161 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 17:40:05,576 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.415
+2026-09-29 17:40:05,591 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 17:42:28,188 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=143.048
+2026-09-29 17:42:28,222 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=143.315 stage_durations={"db": 143.0477295999881, "process": 0.25534829997923225, "source_read": 0.01236089994199574}
+2026-09-29 17:42:28,253 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=143.567
+2026-09-29 17:42:28,269 | INFO | pipeline_scheduler | job=weather_warning run_id=21cdd8d2d0c2401fa4955473afd3a850 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=148.229
+2026-09-29 17:42:28,270 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 17:50:00 Asia/Seoul)" executed successfully
+2026-09-29 17:42:28,292 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=142.702
+2026-09-29 17:42:28,294 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=143.141 stage_durations={"db": 142.70191509998403, "process": 0.4147904999554157, "source_read": 0.02418279997073114}
+2026-09-29 17:42:28,294 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=143.454
+2026-09-29 17:42:28,305 | INFO | pipeline_scheduler | job=weather run_id=a0a896377b3c49c4b6456aaa98650893 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=148.270
+2026-09-29 17:42:28,306 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 18:10:00 Asia/Seoul)" executed successfully
+2026-09-29 17:50:00,013 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:00:00 Asia/Seoul)" (scheduled at 2026-09-29 17:50:00+09:00)
+2026-09-29 17:50:00,028 | INFO | pipeline_scheduler | job=weather_warning run_id=245563524914466b8bb975f8ec804c6b status=START
+2026-09-29 17:50:00,028 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 17:50:02,105 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.077
+2026-09-29 17:50:02,111 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 17:50:02,186 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 17:50:02,192 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.006
+2026-09-29 17:50:02,193 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 17:50:02,290 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.097
+2026-09-29 17:50:02,292 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 17:50:02,350 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.059
+2026-09-29 17:50:02,352 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.162 stage_durations={"db": 0.05877560004591942, "process": 0.09653960005380213, "source_read": 0.006303100031800568}
+2026-09-29 17:50:02,352 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.242
+2026-09-29 17:50:02,368 | INFO | pipeline_scheduler | job=weather_warning run_id=245563524914466b8bb975f8ec804c6b status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.326
+2026-09-29 17:50:02,370 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:00:00 Asia/Seoul)" executed successfully
+2026-09-29 18:00:00,007 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:10:00 Asia/Seoul)" (scheduled at 2026-09-29 18:00:00+09:00)
+2026-09-29 18:00:00,022 | INFO | pipeline_scheduler | job=weather_warning run_id=99a7cbd91c60497393672b9a61831b53 status=START
+2026-09-29 18:00:00,022 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:00:01,854 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=1.831
+2026-09-29 18:00:01,854 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:00:01,929 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:00:01,936 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 18:00:01,937 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:00:02,052 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.115
+2026-09-29 18:00:02,055 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:00:02,119 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.065
+2026-09-29 18:00:02,120 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.187 stage_durations={"db": 0.06474840000737458, "process": 0.11489259998779744, "source_read": 0.007127000018954277}
+2026-09-29 18:00:02,120 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.266
+2026-09-29 18:00:02,133 | INFO | pipeline_scheduler | job=weather_warning run_id=99a7cbd91c60497393672b9a61831b53 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.100
+2026-09-29 18:00:02,133 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:10:00 Asia/Seoul)" executed successfully
+2026-09-29 18:10:00,010 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 18:40:00 Asia/Seoul)" (scheduled at 2026-09-29 18:10:00+09:00)
+2026-09-29 18:10:00,010 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:20:00 Asia/Seoul)" (scheduled at 2026-09-29 18:10:00+09:00)
+2026-09-29 18:10:00,025 | INFO | pipeline_scheduler | job=weather run_id=f9467d346d934499bb8f8d640f89b8b8 status=START
+2026-09-29 18:10:00,026 | INFO | pipeline_scheduler | job=weather_warning run_id=cc52b3d9095044978fd993ed7055dd15 status=START
+2026-09-29 18:10:00,026 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 18:10:00,027 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:10:02,104 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.078
+2026-09-29 18:10:02,118 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 18:10:02,137 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.110
+2026-09-29 18:10:02,138 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:10:02,205 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 18:10:02,216 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.010
+2026-09-29 18:10:02,217 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 18:10:02,317 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:10:02,442 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.125
+2026-09-29 18:10:02,446 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.229
+2026-09-29 18:10:02,446 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:10:02,446 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 18:10:02,560 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.115
+2026-09-29 18:10:02,564 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:10:02,701 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.137
+2026-09-29 18:10:02,702 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.376 stage_durations={"db": 0.13711060001514852, "process": 0.11470629996620119, "source_read": 0.12450120004359633}
+2026-09-29 18:10:02,703 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.565
+2026-09-29 18:10:02,710 | INFO | pipeline_scheduler | job=weather_warning run_id=cc52b3d9095044978fd993ed7055dd15 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.678
+2026-09-29 18:10:02,711 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:20:00 Asia/Seoul)" executed successfully
+2026-09-29 18:10:02,719 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.273
+2026-09-29 18:10:02,720 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.512 stage_durations={"db": 0.2731688000494614, "process": 0.22890570003073663, "source_read": 0.01019329996779561}
+2026-09-29 18:10:02,721 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.603
+2026-09-29 18:10:02,729 | INFO | pipeline_scheduler | job=weather run_id=f9467d346d934499bb8f8d640f89b8b8 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.697
+2026-09-29 18:10:02,730 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 18:40:00 Asia/Seoul)" executed successfully
+2026-09-29 18:15:00,008 | INFO | apscheduler.executors.default | Running job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 19:15:00 Asia/Seoul)" (scheduled at 2026-09-29 18:15:00+09:00)
+2026-09-29 18:15:00,023 | INFO | pipeline_scheduler | job=air_quality run_id=c29f73ea8f504c4baff7a4abbe69c2b6 status=START
+2026-09-29 18:15:00,023 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+2026-09-29 18:15:07,436 | INFO | pipeline_scheduler | job=air_quality stage=collect status=OK attempt=1/3 elapsed_seconds=7.413
+2026-09-29 18:15:07,437 | INFO | pipeline_scheduler | job=air_quality stage=load status=START
+2026-09-29 18:15:07,509 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=START
+2026-09-29 18:15:07,521 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=OK elapsed_seconds=0.013
+2026-09-29 18:15:07,522 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=START
+2026-09-29 18:15:07,784 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=OK elapsed_seconds=0.262
+2026-09-29 18:15:07,799 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=START
+2026-09-29 18:15:08,637 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=OK elapsed_seconds=0.837
+2026-09-29 18:15:08,638 | INFO | pipeline_elt | dataset=air_quality source=raw_database tables=air_quality status=SUCCESS elapsed_seconds=1.112 stage_durations={"db": 0.8374569999286905, "process": 0.26190030004363507, "source_read": 0.012731099966913462}
+2026-09-29 18:15:08,639 | INFO | pipeline_scheduler | job=air_quality stage=load status=OK elapsed_seconds=1.203
+2026-09-29 18:15:08,654 | INFO | pipeline_scheduler | job=air_quality run_id=c29f73ea8f504c4baff7a4abbe69c2b6 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=8.618
+2026-09-29 18:15:08,655 | INFO | apscheduler.executors.default | Job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 19:15:00 Asia/Seoul)" executed successfully
+2026-09-29 18:20:00,014 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:30:00 Asia/Seoul)" (scheduled at 2026-09-29 18:20:00+09:00)
+2026-09-29 18:20:00,028 | INFO | pipeline_scheduler | job=weather_warning run_id=07c0b3a43ec84d5d9d0054348a403359 status=START
+2026-09-29 18:20:00,029 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:20:02,014 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=1.985
+2026-09-29 18:20:02,015 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:20:02,087 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:20:02,095 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 18:20:02,096 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:20:02,244 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.148
+2026-09-29 18:20:02,246 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:20:02,299 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.053
+2026-09-29 18:20:02,300 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.209 stage_durations={"db": 0.053440700052306056, "process": 0.148326100083068, "source_read": 0.007307899999432266}
+2026-09-29 18:20:02,300 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.285
+2026-09-29 18:20:02,312 | INFO | pipeline_scheduler | job=weather_warning run_id=07c0b3a43ec84d5d9d0054348a403359 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.272
+2026-09-29 18:20:02,313 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:30:00 Asia/Seoul)" executed successfully
+2026-09-29 18:30:00,012 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:40:00 Asia/Seoul)" (scheduled at 2026-09-29 18:30:00+09:00)
+2026-09-29 18:30:00,027 | INFO | pipeline_scheduler | job=weather_warning run_id=b584be063237407d99c88c29760b2feb status=START
+2026-09-29 18:30:00,027 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:30:02,297 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.269
+2026-09-29 18:30:02,312 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:30:02,427 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:30:02,450 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.023
+2026-09-29 18:30:02,451 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:30:02,639 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.188
+2026-09-29 18:30:02,655 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:30:02,751 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.097
+2026-09-29 18:30:02,753 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.308 stage_durations={"db": 0.09666470007505268, "process": 0.18825280002783984, "source_read": 0.022856199997477233}
+2026-09-29 18:30:02,754 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.442
+2026-09-29 18:30:02,768 | INFO | pipeline_scheduler | job=weather_warning run_id=b584be063237407d99c88c29760b2feb status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.730
+2026-09-29 18:30:02,771 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:40:00 Asia/Seoul)" executed successfully
+2026-09-29 18:40:00,011 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 19:10:00 Asia/Seoul)" (scheduled at 2026-09-29 18:40:00+09:00)
+2026-09-29 18:40:00,012 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:50:00 Asia/Seoul)" (scheduled at 2026-09-29 18:40:00+09:00)
+2026-09-29 18:40:00,029 | INFO | pipeline_scheduler | job=weather_warning run_id=73c570fa24d24be691391f6fde513b05 status=START
+2026-09-29 18:40:00,028 | INFO | pipeline_scheduler | job=weather run_id=d713c923da204378874e266ace5c5e10 status=START
+2026-09-29 18:40:00,031 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 18:40:00,029 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:40:02,447 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.416
+2026-09-29 18:40:02,463 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 18:40:02,584 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 18:40:02,598 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.014
+2026-09-29 18:40:02,599 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 18:40:02,614 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.584
+2026-09-29 18:40:02,630 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:40:02,914 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.316
+2026-09-29 18:40:02,929 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 18:40:02,968 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:40:02,978 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.010
+2026-09-29 18:40:02,980 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:40:03,232 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.252
+2026-09-29 18:40:03,235 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:40:03,451 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.217
+2026-09-29 18:40:03,468 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.479 stage_durations={"db": 0.21658810006920248, "process": 0.25167879997752607, "source_read": 0.010346499970182776}
+2026-09-29 18:40:03,470 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.840
+2026-09-29 18:40:03,497 | INFO | pipeline_scheduler | job=weather_warning run_id=73c570fa24d24be691391f6fde513b05 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.443
+2026-09-29 18:40:03,499 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 18:50:00 Asia/Seoul)" executed successfully
+2026-09-29 18:40:03,502 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.573
+2026-09-29 18:40:03,503 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.902 stage_durations={"db": 0.572744800010696, "process": 0.3155032000504434, "source_read": 0.01404440007172525}
+2026-09-29 18:40:03,504 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=1.041
+2026-09-29 18:40:03,518 | INFO | pipeline_scheduler | job=weather run_id=d713c923da204378874e266ace5c5e10 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.479
+2026-09-29 18:40:03,520 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 19:10:00 Asia/Seoul)" executed successfully
+2026-09-29 18:50:00,013 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:00:00 Asia/Seoul)" (scheduled at 2026-09-29 18:50:00+09:00)
+2026-09-29 18:50:00,029 | INFO | pipeline_scheduler | job=weather_warning run_id=59cf7eff35b246b4b9fee3ac5a142d85 status=START
+2026-09-29 18:50:00,030 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 18:50:02,783 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.753
+2026-09-29 18:50:02,787 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 18:50:02,885 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 18:50:02,894 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 18:50:02,895 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 18:50:03,107 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.212
+2026-09-29 18:50:03,108 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 18:50:03,223 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.115
+2026-09-29 18:50:03,239 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.336 stage_durations={"db": 0.11474129999987781, "process": 0.21200599998701364, "source_read": 0.008792100008577108}
+2026-09-29 18:50:03,240 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.453
+2026-09-29 18:50:03,266 | INFO | pipeline_scheduler | job=weather_warning run_id=59cf7eff35b246b4b9fee3ac5a142d85 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.213
+2026-09-29 18:50:03,268 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:00:00 Asia/Seoul)" executed successfully
+2026-09-29 19:00:00,006 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:10:00 Asia/Seoul)" (scheduled at 2026-09-29 19:00:00+09:00)
+2026-09-29 19:00:00,022 | INFO | pipeline_scheduler | job=weather_warning run_id=ada8033675644869a4487c97f2396564 status=START
+2026-09-29 19:00:00,023 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:00:02,670 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.647
+2026-09-29 19:00:02,679 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:00:02,777 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:00:02,786 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 19:00:02,787 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:00:03,030 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.243
+2026-09-29 19:00:03,031 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:00:03,156 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.125
+2026-09-29 19:00:03,172 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.377 stage_durations={"db": 0.12451759993564337, "process": 0.24308079993352294, "source_read": 0.009380000061355531}
+2026-09-29 19:00:03,173 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.495
+2026-09-29 19:00:03,191 | INFO | pipeline_scheduler | job=weather_warning run_id=ada8033675644869a4487c97f2396564 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.153
+2026-09-29 19:00:03,193 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:10:00 Asia/Seoul)" executed successfully
+2026-09-29 19:10:00,015 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 19:40:00 Asia/Seoul)" (scheduled at 2026-09-29 19:10:00+09:00)
+2026-09-29 19:10:00,016 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:20:00 Asia/Seoul)" (scheduled at 2026-09-29 19:10:00+09:00)
+2026-09-29 19:10:00,032 | INFO | pipeline_scheduler | job=weather run_id=89ff3229fae84dfc8edce084ea767b0e status=START
+2026-09-29 19:10:00,033 | INFO | pipeline_scheduler | job=weather_warning run_id=0a8178f0cbd9495fb4197ea2de0fd25a status=START
+2026-09-29 19:10:00,034 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 19:10:00,034 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:10:02,710 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.676
+2026-09-29 19:10:02,717 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:10:02,753 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.720
+2026-09-29 19:10:02,754 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 19:10:02,817 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:10:02,826 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 19:10:02,827 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:10:03,046 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.219
+2026-09-29 19:10:03,046 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:10:03,057 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 19:10:03,069 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.011
+2026-09-29 19:10:03,069 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 19:10:03,427 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.357
+2026-09-29 19:10:03,439 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.393
+2026-09-29 19:10:03,442 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 19:10:03,443 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.621 stage_durations={"db": 0.39288069994654506, "process": 0.21882710000500083, "source_read": 0.008828500052914023}
+2026-09-29 19:10:03,468 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.751
+2026-09-29 19:10:03,500 | INFO | pipeline_scheduler | job=weather_warning run_id=0a8178f0cbd9495fb4197ea2de0fd25a status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.438
+2026-09-29 19:10:03,502 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:20:00 Asia/Seoul)" executed successfully
+2026-09-29 19:10:03,802 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.360
+2026-09-29 19:10:03,818 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.728 stage_durations={"db": 0.3598333999980241, "process": 0.35738110006786883, "source_read": 0.011216799961403012}
+2026-09-29 19:10:03,819 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=1.065
+2026-09-29 19:10:03,837 | INFO | pipeline_scheduler | job=weather run_id=89ff3229fae84dfc8edce084ea767b0e status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.789
+2026-09-29 19:10:03,838 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 19:40:00 Asia/Seoul)" executed successfully
+2026-09-29 19:15:00,015 | INFO | apscheduler.executors.default | Running job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 20:15:00 Asia/Seoul)" (scheduled at 2026-09-29 19:15:00+09:00)
+2026-09-29 19:15:00,031 | INFO | pipeline_scheduler | job=air_quality run_id=8fb48fabe64d49c2849179d555aafa6d status=START
+2026-09-29 19:15:00,032 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+2026-09-29 19:16:13,562 | INFO | pipeline_scheduler | job=air_quality stage=collect status=OK attempt=1/3 elapsed_seconds=73.530
+2026-09-29 19:16:13,578 | INFO | pipeline_scheduler | job=air_quality stage=load status=START
+2026-09-29 19:16:13,724 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=START
+2026-09-29 19:16:13,762 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=OK elapsed_seconds=0.038
+2026-09-29 19:16:13,763 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=START
+2026-09-29 19:16:14,418 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=OK elapsed_seconds=0.655
+2026-09-29 19:16:14,418 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=START
+2026-09-29 19:16:16,302 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=OK elapsed_seconds=1.883
+2026-09-29 19:16:16,318 | INFO | pipeline_elt | dataset=air_quality source=raw_database tables=air_quality status=SUCCESS elapsed_seconds=2.576 stage_durations={"db": 1.8834374999860302, "process": 0.6545725000323728, "source_read": 0.03801340004429221}
+2026-09-29 19:16:16,321 | INFO | pipeline_scheduler | job=air_quality stage=load status=OK elapsed_seconds=2.744
+2026-09-29 19:16:16,349 | INFO | pipeline_scheduler | job=air_quality run_id=8fb48fabe64d49c2849179d555aafa6d status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=76.293
+2026-09-29 19:16:16,352 | INFO | apscheduler.executors.default | Job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 20:15:00 Asia/Seoul)" executed successfully
+2026-09-29 19:20:00,010 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:30:00 Asia/Seoul)" (scheduled at 2026-09-29 19:20:00+09:00)
+2026-09-29 19:20:00,027 | INFO | pipeline_scheduler | job=weather_warning run_id=4e9715c58c4740928259ff08a557958a status=START
+2026-09-29 19:20:00,028 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:20:02,756 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.728
+2026-09-29 19:20:02,772 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:20:02,875 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:20:02,883 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.008
+2026-09-29 19:20:02,884 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:20:03,089 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.205
+2026-09-29 19:20:03,090 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:20:03,199 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.109
+2026-09-29 19:20:03,227 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.322 stage_durations={"db": 0.10898419993463904, "process": 0.20547269994858652, "source_read": 0.007967100013047457}
+2026-09-29 19:20:03,228 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.456
+2026-09-29 19:20:03,243 | INFO | pipeline_scheduler | job=weather_warning run_id=4e9715c58c4740928259ff08a557958a status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.204
+2026-09-29 19:20:03,244 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:30:00 Asia/Seoul)" executed successfully
+2026-09-29 19:30:00,009 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:40:00 Asia/Seoul)" (scheduled at 2026-09-29 19:30:00+09:00)
+2026-09-29 19:30:00,025 | INFO | pipeline_scheduler | job=weather_warning run_id=a0f7b4a7c32e46ef8ceb382b2f4d6db9 status=START
+2026-09-29 19:30:00,026 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:30:02,610 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.584
+2026-09-29 19:30:02,625 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:30:02,773 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:30:02,786 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.013
+2026-09-29 19:30:02,788 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:30:03,012 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.224
+2026-09-29 19:30:03,025 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:30:03,127 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.102
+2026-09-29 19:30:03,129 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.339 stage_durations={"db": 0.10200760001316667, "process": 0.22395969997160137, "source_read": 0.013044899911619723}
+2026-09-29 19:30:03,130 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.505
+2026-09-29 19:30:03,150 | INFO | pipeline_scheduler | job=weather_warning run_id=a0f7b4a7c32e46ef8ceb382b2f4d6db9 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.107
+2026-09-29 19:30:03,151 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:40:00 Asia/Seoul)" executed successfully
+2026-09-29 19:40:00,001 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 20:10:00 Asia/Seoul)" (scheduled at 2026-09-29 19:40:00+09:00)
+2026-09-29 19:40:00,001 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:50:00 Asia/Seoul)" (scheduled at 2026-09-29 19:40:00+09:00)
+2026-09-29 19:40:00,016 | INFO | pipeline_scheduler | job=weather run_id=37911c0038e74de4b9cbd5ddd3f61704 status=START
+2026-09-29 19:40:00,017 | INFO | pipeline_scheduler | job=weather_warning run_id=f5fb79472c5d4a7cb0142f177446af78 status=START
+2026-09-29 19:40:00,017 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 19:40:00,017 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:40:03,435 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=3.418
+2026-09-29 19:40:03,455 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:40:03,513 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=3.496
+2026-09-29 19:40:03,514 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 19:40:03,580 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:40:03,591 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.011
+2026-09-29 19:40:03,591 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:40:03,728 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.136
+2026-09-29 19:40:03,729 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:40:03,737 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 19:40:03,748 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.010
+2026-09-29 19:40:03,749 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 19:40:03,974 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.246
+2026-09-29 19:40:03,975 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.227
+2026-09-29 19:40:03,989 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.393 stage_durations={"db": 0.24565540009643883, "process": 0.13635189994238317, "source_read": 0.010846899938769639}
+2026-09-29 19:40:03,990 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 19:40:03,990 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.535
+2026-09-29 19:40:04,019 | INFO | pipeline_scheduler | job=weather_warning run_id=f5fb79472c5d4a7cb0142f177446af78 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.980
+2026-09-29 19:40:04,022 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 19:50:00 Asia/Seoul)" executed successfully
+2026-09-29 19:40:04,234 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.245
+2026-09-29 19:40:04,242 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.482 stage_durations={"db": 0.24480169999878854, "process": 0.22684719995595515, "source_read": 0.010235499939881265}
+2026-09-29 19:40:04,243 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.729
+2026-09-29 19:40:04,257 | INFO | pipeline_scheduler | job=weather run_id=37911c0038e74de4b9cbd5ddd3f61704 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=4.229
+2026-09-29 19:40:04,258 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 20:10:00 Asia/Seoul)" executed successfully
+2026-09-29 19:50:00,001 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:00:00 Asia/Seoul)" (scheduled at 2026-09-29 19:50:00+09:00)
+2026-09-29 19:50:00,016 | INFO | pipeline_scheduler | job=weather_warning run_id=ef8adc5f367744b19a7c7ec6cab86acd status=START
+2026-09-29 19:50:00,017 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 19:50:07,368 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=7.351
+2026-09-29 19:50:07,372 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 19:50:07,456 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 19:50:07,463 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 19:50:07,464 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 19:50:07,591 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.127
+2026-09-29 19:50:07,592 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 19:50:07,649 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.057
+2026-09-29 19:50:07,651 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.192 stage_durations={"db": 0.057177399983629584, "process": 0.12741440010722727, "source_read": 0.007129399920813739}
+2026-09-29 19:50:07,651 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.279
+2026-09-29 19:50:07,669 | INFO | pipeline_scheduler | job=weather_warning run_id=ef8adc5f367744b19a7c7ec6cab86acd status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=7.636
+2026-09-29 19:50:07,670 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:00:00 Asia/Seoul)" executed successfully
+2026-09-29 20:00:00,008 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:10:00 Asia/Seoul)" (scheduled at 2026-09-29 20:00:00+09:00)
+2026-09-29 20:00:00,024 | INFO | pipeline_scheduler | job=weather_warning run_id=9ac427ecdd2a4995b429157a63558562 status=START
+2026-09-29 20:00:00,024 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:00:02,251 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.227
+2026-09-29 20:00:02,252 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:00:02,333 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:00:02,341 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.007
+2026-09-29 20:00:02,341 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:00:02,436 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.095
+2026-09-29 20:00:02,437 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:00:02,507 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.070
+2026-09-29 20:00:02,508 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.172 stage_durations={"db": 0.06990319991018623, "process": 0.09526860003825277, "source_read": 0.007129899924620986}
+2026-09-29 20:00:02,509 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.257
+2026-09-29 20:00:02,525 | INFO | pipeline_scheduler | job=weather_warning run_id=9ac427ecdd2a4995b429157a63558562 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.487
+2026-09-29 20:00:02,527 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:10:00 Asia/Seoul)" executed successfully
+2026-09-29 20:10:00,015 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 20:40:00 Asia/Seoul)" (scheduled at 2026-09-29 20:10:00+09:00)
+2026-09-29 20:10:00,016 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:20:00 Asia/Seoul)" (scheduled at 2026-09-29 20:10:00+09:00)
+2026-09-29 20:10:00,031 | INFO | pipeline_scheduler | job=weather run_id=c9da91427cc84c79a2eba7455d6b1419 status=START
+2026-09-29 20:10:00,032 | INFO | pipeline_scheduler | job=weather_warning run_id=5ad64e5453d4438983a01bbf37f7d8fc status=START
+2026-09-29 20:10:00,032 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 20:10:00,033 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:10:02,882 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.850
+2026-09-29 20:10:02,898 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 20:10:03,010 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 20:10:03,022 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.012
+2026-09-29 20:10:03,022 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 20:10:03,098 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=3.065
+2026-09-29 20:10:03,099 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:10:03,231 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.209
+2026-09-29 20:10:03,232 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 20:10:03,280 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:10:03,286 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.005
+2026-09-29 20:10:03,286 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:10:03,425 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.139
+2026-09-29 20:10:03,454 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:10:03,544 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.312
+2026-09-29 20:10:03,545 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.533 stage_durations={"db": 0.3122950999531895, "process": 0.2088726001093164, "source_read": 0.011537599959410727}
+2026-09-29 20:10:03,545 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.648
+2026-09-29 20:10:03,555 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.101
+2026-09-29 20:10:03,556 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.245 stage_durations={"db": 0.10075569991022348, "process": 0.13870090001728386, "source_read": 0.005471199983730912}
+2026-09-29 20:10:03,556 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.457
+2026-09-29 20:10:03,558 | INFO | pipeline_scheduler | job=weather run_id=c9da91427cc84c79a2eba7455d6b1419 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.516
+2026-09-29 20:10:03,560 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 20:40:00 Asia/Seoul)" executed successfully
+2026-09-29 20:10:03,565 | INFO | pipeline_scheduler | job=weather_warning run_id=5ad64e5453d4438983a01bbf37f7d8fc status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.525
+2026-09-29 20:10:03,566 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:20:00 Asia/Seoul)" executed successfully
+2026-09-29 20:15:00,006 | INFO | apscheduler.executors.default | Running job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 21:15:00 Asia/Seoul)" (scheduled at 2026-09-29 20:15:00+09:00)
+2026-09-29 20:15:00,007 | INFO | pipeline_scheduler | job=air_quality run_id=f1406da3bd1645a4ab61fc749b55f7ef status=START
+2026-09-29 20:15:00,007 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+2026-09-29 20:15:04,656 | INFO | pipeline_scheduler | job=air_quality stage=collect status=OK attempt=1/3 elapsed_seconds=4.649
+2026-09-29 20:15:04,665 | INFO | pipeline_scheduler | job=air_quality stage=load status=START
+2026-09-29 20:15:04,737 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=START
+2026-09-29 20:15:04,751 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=OK elapsed_seconds=0.013
+2026-09-29 20:15:04,751 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=START
+2026-09-29 20:15:05,153 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=OK elapsed_seconds=0.402
+2026-09-29 20:15:05,167 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=START
+2026-09-29 20:15:06,558 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=OK elapsed_seconds=1.391
+2026-09-29 20:15:06,573 | INFO | pipeline_elt | dataset=air_quality source=raw_database tables=air_quality status=SUCCESS elapsed_seconds=1.806 stage_durations={"db": 1.3906215999741107, "process": 0.40211040002759546, "source_read": 0.01333440002053976}
+2026-09-29 20:15:06,575 | INFO | pipeline_scheduler | job=air_quality stage=load status=OK elapsed_seconds=1.910
+2026-09-29 20:15:06,591 | INFO | pipeline_scheduler | job=air_quality run_id=f1406da3bd1645a4ab61fc749b55f7ef status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=6.570
+2026-09-29 20:15:06,593 | INFO | apscheduler.executors.default | Job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 21:15:00 Asia/Seoul)" executed successfully
+2026-09-29 20:20:00,005 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:30:00 Asia/Seoul)" (scheduled at 2026-09-29 20:20:00+09:00)
+2026-09-29 20:20:00,020 | INFO | pipeline_scheduler | job=weather_warning run_id=17394931e99c45b5b7dd7fd09f020ca6 status=START
+2026-09-29 20:20:00,021 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:20:02,629 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.608
+2026-09-29 20:20:02,630 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:20:02,719 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:20:02,728 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 20:20:02,729 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:20:02,853 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.123
+2026-09-29 20:20:02,854 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:20:02,921 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.067
+2026-09-29 20:20:02,923 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.200 stage_durations={"db": 0.06734790001064539, "process": 0.12347109999973327, "source_read": 0.009370299987494946}
+2026-09-29 20:20:02,923 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.293
+2026-09-29 20:20:02,932 | INFO | pipeline_scheduler | job=weather_warning run_id=17394931e99c45b5b7dd7fd09f020ca6 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.904
+2026-09-29 20:20:02,933 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:30:00 Asia/Seoul)" executed successfully
+2026-09-29 20:30:00,002 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:40:00 Asia/Seoul)" (scheduled at 2026-09-29 20:30:00+09:00)
+2026-09-29 20:30:00,019 | INFO | pipeline_scheduler | job=weather_warning run_id=1fc39db61b4d4919a24763340f30a981 status=START
+2026-09-29 20:30:00,020 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:30:02,345 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.325
+2026-09-29 20:30:02,346 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:30:02,427 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:30:02,433 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.006
+2026-09-29 20:30:02,434 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:30:02,546 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.112
+2026-09-29 20:30:02,547 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:30:02,607 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.060
+2026-09-29 20:30:02,607 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.178 stage_durations={"db": 0.05991370009724051, "process": 0.11223450000397861, "source_read": 0.0058530999813228846}
+2026-09-29 20:30:02,608 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.262
+2026-09-29 20:30:02,621 | INFO | pipeline_scheduler | job=weather_warning run_id=1fc39db61b4d4919a24763340f30a981 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.590
+2026-09-29 20:30:02,622 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:40:00 Asia/Seoul)" executed successfully
+2026-09-29 20:40:00,013 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:50:00 Asia/Seoul)" (scheduled at 2026-09-29 20:40:00+09:00)
+2026-09-29 20:40:00,014 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 21:10:00 Asia/Seoul)" (scheduled at 2026-09-29 20:40:00+09:00)
+2026-09-29 20:40:00,029 | INFO | pipeline_scheduler | job=weather_warning run_id=4d6838cb5c2d4b638a1f10f0e2933d72 status=START
+2026-09-29 20:40:00,029 | INFO | pipeline_scheduler | job=weather run_id=78a2e9870da440bfb857905e5770e581 status=START
+2026-09-29 20:40:00,029 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:40:00,030 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 20:40:02,330 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.301
+2026-09-29 20:40:02,332 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 20:40:02,340 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.310
+2026-09-29 20:40:02,341 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:40:02,431 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 20:40:02,441 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.009
+2026-09-29 20:40:02,442 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 20:40:02,546 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:40:02,605 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.059
+2026-09-29 20:40:02,609 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:40:02,669 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.228
+2026-09-29 20:40:02,672 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 20:40:02,727 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.117
+2026-09-29 20:40:02,727 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:40:02,868 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.141
+2026-09-29 20:40:02,869 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.317 stage_durations={"db": 0.14073670003563166, "process": 0.11733940010890365, "source_read": 0.05915019998792559}
+2026-09-29 20:40:02,870 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.529
+2026-09-29 20:40:02,888 | INFO | pipeline_scheduler | job=weather_warning run_id=4d6838cb5c2d4b638a1f10f0e2933d72 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.842
+2026-09-29 20:40:02,889 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 20:50:00 Asia/Seoul)" executed successfully
+2026-09-29 20:40:02,927 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.255
+2026-09-29 20:40:02,928 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.493 stage_durations={"db": 0.2551164000760764, "process": 0.22794939996674657, "source_read": 0.009435100015252829}
+2026-09-29 20:40:02,929 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.597
+2026-09-29 20:40:02,939 | INFO | pipeline_scheduler | job=weather run_id=78a2e9870da440bfb857905e5770e581 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.901
+2026-09-29 20:40:02,940 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 21:10:00 Asia/Seoul)" executed successfully
+2026-09-29 20:50:00,010 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:00:00 Asia/Seoul)" (scheduled at 2026-09-29 20:50:00+09:00)
+2026-09-29 20:50:00,026 | INFO | pipeline_scheduler | job=weather_warning run_id=597ac0aeb6aa4502bb6d91dfad23e591 status=START
+2026-09-29 20:50:00,026 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 20:50:02,850 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.824
+2026-09-29 20:50:02,851 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 20:50:02,962 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 20:50:02,969 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.008
+2026-09-29 20:50:02,970 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 20:50:03,075 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.105
+2026-09-29 20:50:03,076 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 20:50:03,148 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.072
+2026-09-29 20:50:03,149 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.185 stage_durations={"db": 0.07240479998290539, "process": 0.10500980005599558, "source_read": 0.007601000019349158}
+2026-09-29 20:50:03,150 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.299
+2026-09-29 20:50:03,158 | INFO | pipeline_scheduler | job=weather_warning run_id=597ac0aeb6aa4502bb6d91dfad23e591 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.125
+2026-09-29 20:50:03,159 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:00:00 Asia/Seoul)" executed successfully
+2026-09-29 21:00:00,005 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:10:00 Asia/Seoul)" (scheduled at 2026-09-29 21:00:00+09:00)
+2026-09-29 21:00:00,021 | INFO | pipeline_scheduler | job=weather_warning run_id=3fedbed819924ff0b5abd9f9a24a7d04 status=START
+2026-09-29 21:00:00,022 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 21:00:02,447 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.425
+2026-09-29 21:00:02,448 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 21:00:02,533 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 21:00:02,539 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.006
+2026-09-29 21:00:02,539 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 21:00:02,662 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.123
+2026-09-29 21:00:02,664 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 21:00:02,725 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.061
+2026-09-29 21:00:02,726 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.191 stage_durations={"db": 0.061306699994020164, "process": 0.1231577000580728, "source_read": 0.006099599995650351}
+2026-09-29 21:00:02,727 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.278
+2026-09-29 21:00:02,744 | INFO | pipeline_scheduler | job=weather_warning run_id=3fedbed819924ff0b5abd9f9a24a7d04 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.707
+2026-09-29 21:00:02,745 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:10:00 Asia/Seoul)" executed successfully
+2026-09-29 21:10:00,002 | INFO | apscheduler.executors.default | Running job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 21:40:00 Asia/Seoul)" (scheduled at 2026-09-29 21:10:00+09:00)
+2026-09-29 21:10:00,002 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:20:00 Asia/Seoul)" (scheduled at 2026-09-29 21:10:00+09:00)
+2026-09-29 21:10:00,017 | INFO | pipeline_scheduler | job=weather run_id=b8bd8e898fa248d68e4194218fa681fa status=START
+2026-09-29 21:10:00,018 | INFO | pipeline_scheduler | job=weather_warning run_id=9fe30ba67ca6409185ae41f592054cea status=START
+2026-09-29 21:10:00,018 | INFO | pipeline_scheduler | job=weather stage=collect status=START attempt=1/3
+2026-09-29 21:10:00,019 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 21:10:02,381 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.362
+2026-09-29 21:10:02,382 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 21:10:02,459 | INFO | pipeline_scheduler | job=weather stage=collect status=OK attempt=1/3 elapsed_seconds=2.441
+2026-09-29 21:10:02,460 | INFO | pipeline_scheduler | job=weather stage=load status=START
+2026-09-29 21:10:02,485 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 21:10:02,491 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.006
+2026-09-29 21:10:02,492 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 21:10:02,637 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.145
+2026-09-29 21:10:02,638 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 21:10:02,645 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=START
+2026-09-29 21:10:02,670 | INFO | pipeline_elt | dataset=weather source=raw_database stage=source_read status=OK elapsed_seconds=0.024
+2026-09-29 21:10:02,671 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=START
+2026-09-29 21:10:02,804 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.166
+2026-09-29 21:10:02,805 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.317 stage_durations={"db": 0.1659986999584362, "process": 0.14453109994065017, "source_read": 0.0063659000443294644}
+2026-09-29 21:10:02,807 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.425
+2026-09-29 21:10:02,822 | INFO | pipeline_scheduler | job=weather_warning run_id=9fe30ba67ca6409185ae41f592054cea status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.790
+2026-09-29 21:10:02,823 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:20:00 Asia/Seoul)" executed successfully
+2026-09-29 21:10:02,872 | INFO | pipeline_elt | dataset=weather source=raw_database stage=process status=OK elapsed_seconds=0.201
+2026-09-29 21:10:02,873 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=START
+2026-09-29 21:10:03,225 | INFO | pipeline_elt | dataset=weather source=raw_database stage=db status=OK elapsed_seconds=0.352
+2026-09-29 21:10:03,241 | INFO | pipeline_elt | dataset=weather source=raw_database tables=weather_ultra_ncst,weather_ultra_fcst status=SUCCESS elapsed_seconds=0.578 stage_durations={"db": 0.35247819998767227, "process": 0.20091100002173334, "source_read": 0.024496300029568374}
+2026-09-29 21:10:03,242 | INFO | pipeline_scheduler | job=weather stage=load status=OK elapsed_seconds=0.782
+2026-09-29 21:10:03,251 | INFO | pipeline_scheduler | job=weather run_id=b8bd8e898fa248d68e4194218fa681fa status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=3.226
+2026-09-29 21:10:03,253 | INFO | apscheduler.executors.default | Job "weather: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='10,40'], next run at: 2026-09-29 21:40:00 Asia/Seoul)" executed successfully
+2026-09-29 21:15:00,002 | INFO | apscheduler.executors.default | Running job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 22:15:00 Asia/Seoul)" (scheduled at 2026-09-29 21:15:00+09:00)
+2026-09-29 21:15:00,018 | INFO | pipeline_scheduler | job=air_quality run_id=9552b0659b31414ebc823aff0b13e13f status=START
+2026-09-29 21:15:00,019 | INFO | pipeline_scheduler | job=air_quality stage=collect status=START attempt=1/3
+2026-09-29 21:15:35,500 | INFO | pipeline_scheduler | job=air_quality stage=collect status=OK attempt=1/3 elapsed_seconds=35.480
+2026-09-29 21:15:35,500 | INFO | pipeline_scheduler | job=air_quality stage=load status=START
+2026-09-29 21:15:35,576 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=START
+2026-09-29 21:15:35,598 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=source_read status=OK elapsed_seconds=0.022
+2026-09-29 21:15:35,599 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=START
+2026-09-29 21:15:36,024 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=process status=OK elapsed_seconds=0.425
+2026-09-29 21:15:36,040 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=START
+2026-09-29 21:15:37,428 | INFO | pipeline_elt | dataset=air_quality source=raw_database stage=db status=OK elapsed_seconds=1.388
+2026-09-29 21:15:37,443 | INFO | pipeline_elt | dataset=air_quality source=raw_database tables=air_quality status=SUCCESS elapsed_seconds=1.834 stage_durations={"db": 1.3875979000004008, "process": 0.4252270000288263, "source_read": 0.021657699951902032}
+2026-09-29 21:15:37,445 | INFO | pipeline_scheduler | job=air_quality stage=load status=OK elapsed_seconds=1.945
+2026-09-29 21:15:37,456 | INFO | pipeline_scheduler | job=air_quality run_id=9552b0659b31414ebc823aff0b13e13f status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=37.428
+2026-09-29 21:15:37,458 | INFO | apscheduler.executors.default | Job "air_quality: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='15'], next run at: 2026-09-29 22:15:00 Asia/Seoul)" executed successfully
+2026-09-29 21:20:00,014 | INFO | apscheduler.executors.default | Running job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:30:00 Asia/Seoul)" (scheduled at 2026-09-29 21:20:00+09:00)
+2026-09-29 21:20:00,029 | INFO | pipeline_scheduler | job=weather_warning run_id=977ad90649d24a18882c3440895be648 status=START
+2026-09-29 21:20:00,029 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=START attempt=1/3
+2026-09-29 21:20:02,369 | INFO | pipeline_scheduler | job=weather_warning stage=collect status=OK attempt=1/3 elapsed_seconds=2.340
+2026-09-29 21:20:02,370 | INFO | pipeline_scheduler | job=weather_warning stage=load status=START
+2026-09-29 21:20:02,475 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=START
+2026-09-29 21:20:02,486 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=source_read status=OK elapsed_seconds=0.011
+2026-09-29 21:20:02,487 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=START
+2026-09-29 21:20:02,625 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=process status=OK elapsed_seconds=0.138
+2026-09-29 21:20:02,629 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=START
+2026-09-29 21:20:02,713 | INFO | pipeline_elt | dataset=weather_warning source=raw_database stage=db status=OK elapsed_seconds=0.084
+2026-09-29 21:20:02,714 | INFO | pipeline_elt | dataset=weather_warning source=raw_database tables=weather_warning,weather_warning_status status=SUCCESS elapsed_seconds=0.233 stage_durations={"db": 0.08433959993999451, "process": 0.13776299997698516, "source_read": 0.011311099980957806}
+2026-09-29 21:20:02,715 | INFO | pipeline_scheduler | job=weather_warning stage=load status=OK elapsed_seconds=0.345
+2026-09-29 21:20:02,731 | INFO | pipeline_scheduler | job=weather_warning run_id=977ad90649d24a18882c3440895be648 status=SUCCESS dq_status=CHECK_PASSED elapsed_seconds=2.687
+2026-09-29 21:20:02,732 | INFO | apscheduler.executors.default | Job "weather_warning: collect -> process -> database (trigger: cron[month='*', day='*', day_of_week='*', hour='*', minute='*/10'], next run at: 2026-09-29 21:30:00 Asia/Seoul)" executed successfully
