@@ -12,25 +12,10 @@
 [![Unexplained Loss](https://img.shields.io/badge/Unexplained_Loss-0_Rows-brightgreen.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
 [![Competition Entry](https://img.shields.io/badge/2026_KSPO_Competition-Official_Entry-8A2BE2.svg?logo=target&logoColor=white)](https://www.kspo.or.kr/)
 
-> **"If data cannot be audited, it is not reliable."**  
-> 🏆 **2026 KSPO Public Big Data Utilization Competition Official Entry (Service Development Track)**  
+> **"Pipeline SUCCESS ≠ Data Integrity PASS: Verifying that data truly survived transformations as intended."**  
+> 🎯 **Production Data Reliability & DQ Audit System for 'Woosimwoonkka' (2026 KSPO Competition Entry)**  
+> 💡 **Woosimwoonkka ("Shall we work out, since we're bored?")** — Sports facility recommendation service across 4 disciplines (Running, Cycling, Fitness, CrossFit), fusing multi-agency public datasets (KMA, AirKorea, data.go.kr)  
 > 👤 **Data Engineering & Pipeline Lead**: **Sunyoung Baik ([@baikAnalyst](https://github.com/baikAnalyst))**
-
----
-
-## 📌 Executive Summary
-
-| Metric | Measured Value | Engineering Significance |
-| :--- | :---: | :--- |
-| **Competition Track** | **2026 KSPO Public Big Data Utilization Competition (Service Development Track)** | Core end-to-end data pipeline foundation engineered for the official competition submission |
-| **Total Datasets Managed** | **19 Datasets** | Heterogeneous integration of real-time weather, air quality, AED locators, national sports facilities, and Durunubi trail networks |
-| **Raw Ingested Records (RAW)** | **4,088,065 rows** | High-throughput API ingestion and Selenium headless scraping loaded directly into PostgreSQL RAW |
-| **Curated Records (PROCESSED)** | **4,009,597 rows** | Fully verified coordinate geometry (ROK bounding box), null standardization, and datatype normalization |
-| **Unexplained Row Loss** | **0 rows (0.00%)** | **100% of the 78,468 excluded records mathematically accounted for with distinct, recorded justification codes** |
-| **Data Corruption Defenses** | **25,070 rows preserved** | Pre-empted and neutralized catastrophic silent NULL conversion issues caused by upstream specification deviations |
-| **Automated Zero-Downtime Ops** | **Bifurcated Operations** | Daily operational health digest and real-time incident notifications dispatched via automated Webhook hooks |
-
----
 
 ## 🏗️ 1. Architecture & Multi-Schema Isolation
 

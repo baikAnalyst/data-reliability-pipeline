@@ -12,25 +12,10 @@
 [![Unexplained Loss](https://img.shields.io/badge/Unexplained_Loss-0_Rows-brightgreen.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
 [![공모전 출품작](https://img.shields.io/badge/2026_KSPO_공모전-출품작_(서비스_개발_부문)-8A2BE2.svg?logo=target&logoColor=white)](https://www.kspo.or.kr/)
 
-> **"If data cannot be audited, it is not reliable."**  
-> 🏆 **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 출품작 (서비스 개발 부문)**  
+> **"정상 실행 ≠ 정상 데이터: '실행 성공'이 아니라 '데이터가 의도대로 살아남았는지'를 검증합니다."**  
+> 🎯 **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 출품작 '우심운까' 데이터 신뢰성 시스템**  
+> 💡 **우심운까 ("우리 심심한데 운동이나 할까?")** — 기상청·에어코리아·공공데이터포털 등 다종 공공데이터를 융합한 4대 종목(러닝·자전거·헬스·크로스핏) 운동 장소 추천 서비스  
 > 👤 **Data Engineering & Pipeline Lead**: **백선영 ([@baikAnalyst](https://github.com/baikAnalyst))**
-
----
-
-## 📌 Executive Summary (핵심 성과 지표)
-
-| 지표 | 수치 | 엔지니어링 의미 |
-| :--- | :---: | :--- |
-| **공모전 출품 부문** | **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 (서비스 개발 부문)** | 서비스의 기반이 되는 데이터 수집·정제·검증 엔드투엔드 파이프라인 공식 출품작 |
-| **전체 처리 데이터셋** | **19개 Dataset** | 기상 실황/특보, 대기질, AED, 전국체육시설, 두루누비 등 이종(Heterogeneous) 데이터 |
-| **수집 원천 데이터 (RAW)** | **4,088,065 건** | API 병렬 수집 및 Selenium 크롤링을 통한 PostgreSQL RAW 적재 |
-| **정제/가공 데이터 (PROCESSED)** | **4,009,597 건** | 좌표 검증(대한민국 영역), 결측 표준화, 자료형 정규화 완료 |
-| **설명 불가능한 유실 (Unexplained Loss)** | **0 건 (0.00%)** | **전체 78,468건의 정제 제외 데이터에 대해 100% 명확한 탈락 사유 소명 완료** |
-| **장애 사전 방어 사례** | **25,070 건 방어** | 잘못된 명세 변환으로 인한 대규모 NULL 변환 이슈 사전 탐지 및 원천 차단 |
-| **무중단 운영 자동화** | **정기 브리핑 & 장애 알림** | 일일 운영 현황 요약 및 장애 발생 즉시 Webhook 자동 발송 |
-
----
 
 ## 🏗️ 1. Architecture & Multi-Schema Isolation
 
