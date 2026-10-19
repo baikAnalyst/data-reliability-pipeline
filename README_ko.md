@@ -10,6 +10,7 @@
 [![Selenium](https://img.shields.io/badge/Selenium-Automation-43B02A.svg?logo=selenium&logoColor=white)](https://www.selenium.dev/)
 [![Data Quality](https://img.shields.io/badge/DQ_Audit-16_Rules-success.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
 [![Unexplained Loss](https://img.shields.io/badge/Unexplained_Loss-0_Rows-brightgreen.svg)](https://github.com/baikAnalyst/data-reliability-pipeline)
+[![공모전 출품작](https://img.shields.io/badge/2026_KSPO_공모전-출품작_(서비스_개발_부문)-8A2BE2.svg?logo=target&logoColor=white)](https://www.kspo.or.kr/)
 
 > **"If data cannot be audited, it is not reliable."**  
 > 🏆 **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 출품작 (서비스 개발 부문)**  
@@ -21,6 +22,7 @@
 
 | 지표 | 수치 | 엔지니어링 의미 |
 | :--- | :---: | :--- |
+| **공모전 출품 부문** | **2026 국민체육진흥공단(KSPO) 공공·빅데이터 활용 경진대회 (서비스 개발 부문)** | 서비스의 기반이 되는 데이터 수집·정제·검증 엔드투엔드 파이프라인 공식 출품작 |
 | **전체 처리 데이터셋** | **19개 Dataset** | 기상 실황/특보, 대기질, AED, 전국체육시설, 두루누비 등 이종(Heterogeneous) 데이터 |
 | **수집 원천 데이터 (RAW)** | **4,088,065 건** | API 병렬 수집 및 Selenium 크롤링을 통한 PostgreSQL RAW 적재 |
 | **정제/가공 데이터 (PROCESSED)** | **4,009,597 건** | 좌표 검증(대한민국 영역), 결측 표준화, 자료형 정규화 완료 |
