@@ -22,18 +22,18 @@
 To guarantee uncompromising data integrity, the pipeline maintains strict logical and physical isolation across dedicated PostgreSQL schemas.
 
 ```text
- [공공데이터 API (11개 데이터셋)]            [문화빅데이터 플랫폼 (8개 데이터셋)]
+ [Public Data APIs (11 Datasets)]            [Culture Big Data Platform (8 Datasets)]
                │                                            │
       (Open API Collector)                         (Selenium Headless)
                │                                            │
-    가짜 200 탐지 · Backoff Retry                 동적 세션/팝업제어 · CSV 스트리밍
-  전수 건수 대조 & JSONL 체크포인트 복구                        │
+   Fake 200 Detection · Backoff Retry           Dynamic Modal / Session · CSV Streaming
+ Full Reconciliation & JSONL Checkpoint-Resume              │
                │                                            │
-  [JSON/XML 파싱 ➔ Staging 적재]               [PostgreSQL COPY ➔ Staging 적재]
+  [JSON/XML Parse ➔ Staging Ingestion]         [PostgreSQL COPY ➔ Staging Ingestion]
                │                                            │
                └─────────────────────┬──────────────────────┘
                                      │
-                      (Staging 원자적 격리 검증 ➔ RAW 반영)
+                 (Atomic Staging Isolation & Validation ➔ RAW)
                                      │
                                      ▼
 
